@@ -1,0 +1,321 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+/* Brand Theme Variables */
+:root {
+    --brand-red: #e11d48; /* Red-600 */
+    --brand-red-dark: #be123c; /* Red-700 */
+    --brand-yellow: #f59e0b; /* Amber-500 */
+    --brand-yellow-light: #fbbf24; /* Amber-400 */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a; /* Slate 900 */
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--brand-red) 0%, var(--brand-yellow) 100%);
+    border-radius: 5px;
+    border: 2px solid #0f172a;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-red-dark);
+}
+
+/* Tech Blueprint Grid Backgrounds */
+.tech-grid {
+    background-image: 
+        linear-gradient(to right, rgba(225, 29, 72, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(225, 29, 72, 0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: center;
+}
+
+.tech-grid-fine {
+    background-image: 
+        linear-gradient(to right, rgba(245, 158, 11, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(245, 158, 11, 0.02) 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+/* Dark Mode Grid Intensification */
+.dark .tech-grid {
+    background-image: 
+        linear-gradient(to right, rgba(225, 29, 72, 0.09) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(225, 29, 72, 0.09) 1px, transparent 1px);
+}
+
+.dark .tech-grid-fine {
+    background-image: 
+        linear-gradient(to right, rgba(245, 158, 11, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(245, 158, 11, 0.03) 1px, transparent 1px);
+}
+
+/* Glassmorphism Styles */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(225, 29, 72, 0.08);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .glass-nav {
+    background: rgba(15, 23, 42, 0.8);
+    border-bottom: 1px solid rgba(225, 29, 72, 0.2);
+}
+
+.glass-nav.scrolled {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    box-shadow: 0 10px 30px -10px rgba(225, 29, 72, 0.1);
+}
+
+.dark .glass-nav.scrolled {
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.dark .glass-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Text Gradients */
+.text-gradient {
+    background: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-yellow) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Glowing Neon Borders */
+.neon-border-red {
+    box-shadow: 0 0 15px -3px rgba(225, 29, 72, 0.15);
+    border: 1px solid rgba(225, 29, 72, 0.2);
+    transition: all 0.3s ease;
+}
+
+.neon-border-red:hover {
+    box-shadow: 0 0 25px -3px rgba(225, 29, 72, 0.4);
+    border-color: rgba(225, 29, 72, 0.6);
+}
+
+/* 3D Hardware Accelerated Tilt */
+.tilt-3d {
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: transform;
+}
+
+.tilt-child-3d {
+    transform: translateZ(35px);
+}
+
+/* Ticker Animation */
+@keyframes ticker {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.ticker-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ticker-content {
+    display: inline-block;
+    animation: ticker 30s linear infinite;
+}
+
+.ticker-content:hover {
+    animation-play-state: paused;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(0.5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.float-pc {
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Hotspot Animations */
+@keyframes pulse-ring {
+    0% { transform: scale(0.6); opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.hotspot-pulse {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(225, 29, 72, 0.45);
+    animation: pulse-ring 2s cubic-bezier(0.25, 0, 0, 1) infinite;
+}
+
+.hotspot-pulse-yellow {
+    background: rgba(245, 158, 11, 0.45);
+}
+
+.hotspot:hover .hotspot-tooltip {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Journey Cards Design */
+.journey-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(225, 29, 72, 0.1);
+    box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+}
+
+.journey-card img {
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.journey-card:hover img {
+    transform: scale(1.08) rotate(1deg);
+}
+
+.journey-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.5) 50%, transparent 100%);
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+.journey-card:hover::after {
+    background: linear-gradient(to top, rgba(190, 18, 60, 0.95) 0%, rgba(245, 158, 11, 0.4) 70%, transparent 100%);
+}
+
+/* Product Card Physics */
+.product-card {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.dark .product-card {
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.product-card:hover {
+    box-shadow: 0 30px 40px -15px rgba(225, 29, 72, 0.12);
+    transform: translateY(-8px) scale(1.01);
+    border-color: rgba(225, 29, 72, 0.3);
+}
+
+.dark .product-card:hover {
+    box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.6);
+    border-color: rgba(225, 29, 72, 0.5);
+}
+
+.quick-action-btn {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .quick-action-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Benchmark Bar animations */
+.bench-bar {
+    width: 0%;
+    transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom Tactical Power Switch */
+.power-switch-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 3px solid #334155;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.power-switch-btn::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* LED Ring glow indicator */
+.power-switch-led {
+    position: absolute;
+    inset: 2px;
+    border-radius: 50%;
+    border: 2.5px solid #f59e0b; /* Amber-500 led ring in light mode */
+    box-shadow: 0 0 8px #f59e0b, inset 0 0 4px #f59e0b;
+    transition: all 0.4s ease;
+}
+
+.dark .power-switch-led {
+    border-color: #e11d48; /* Red LED ring in dark mode */
+    box-shadow: 0 0 15px #e11d48, inset 0 0 6px #e11d48;
+}
+
+.power-switch-btn:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.6), 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating 3D PC Morphing Connector Styles */
+.holo-mesh {
+    transform: rotateX(75deg) translateZ(-35px);
+}
+
+#floating-pc-rotator {
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg) rotateX(15deg);
+    will-change: transform;
+}
+
+/* Dark Mode Transparent Image Keying Hack */
+.dark #floating-pc-rotator img {
+    filter: invert(1) hue-rotate(180deg) drop-shadow(0 10px 15px rgba(225, 29, 72, 0.4));
+    mix-blend-mode: screen;
+}

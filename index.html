@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenger Computers | India's Custom PC & Gaming Rig Builder</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#e11d48',
+                            yellow: '#f59e0b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100 antialiased font-sans tech-grid tech-grid-fine">
+
+    <!-- Top Bar Ticker & Contacts -->
+    <div class="bg-rose-600 dark:bg-rose-700 text-white py-2 text-xs border-b border-rose-700 select-none z-50 relative">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-1 md:space-y-0">
+            <!-- Left Side scrolling ticker -->
+            <div class="w-full md:w-[70%] ticker-wrap">
+                <div class="ticker-content font-semibold">
+                    <span class="mr-4">⚡ [CHALLENGER RIG SHOWCASE]</span> GET UP TO 20% OFF ON CUSTOM GAMING PCs • EXPERT CABLE MANAGEMENT ON ALL BUILDS • PAN INDIA INSURED SHIPPING • VISIT OUR EXPERIENCE STORES IN CHENNAI! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="mr-4">⚡ [CHALLENGER RIG SHOWCASE]</span> GET UP TO 20% OFF ON CUSTOM GAMING PCs • EXPERT CABLE MANAGEMENT ON ALL BUILDS • PAN INDIA INSURED SHIPPING • VISIT OUR EXPERIENCE STORES IN CHENNAI!
+                </div>
+            </div>
+            <!-- Right Side contacts -->
+            <div class="w-full md:w-[30%] flex justify-end items-center space-x-4 font-bold text-center md:text-right">
+                <a href="tel:+919876543210" class="hover:text-amber-300 transition-colors"><i class="fa-solid fa-phone mr-1"></i> +91 98765 43210</a>
+                <a href="https://wa.me/919876543210" target="_blank" class="hover:text-emerald-300 transition-colors"><i class="fa-brands fa-whatsapp mr-1 text-emerald-400"></i> WhatsApp</a>
+                <a href="mailto:sales@challengerpc.com" class="hover:text-amber-300 transition-colors"><i class="fa-solid fa-envelope mr-1"></i> Email</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Main Header -->
+    <header class="glass-nav sticky top-0 z-40 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            
+            <!-- Logo Section -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="h-10 w-10 flex items-center justify-center overflow-hidden bg-white p-0.5 rounded-lg border border-slate-100 dark:border-slate-800 shadow-sm transition-transform duration-300 group-hover:scale-105">
+                    <img src="assets/images/logo.png" alt="Challenger Computers Logo" class="object-contain h-8 w-8">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-black tracking-tight leading-none text-slate-900 dark:text-white font-heading">
+                        CHALLENGER
+                    </span>
+                    <span class="text-[9px] font-extrabold tracking-widest leading-none text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-amber-500 uppercase mt-0.5">
+                        BUILD YOUR PC
+                    </span>
+                </div>
+            </a>
+
+            <!-- Menu (Center) - Desktop -->
+            <nav class="hidden lg:flex items-center space-x-8 font-semibold text-sm">
+                <a href="#gaming-pcs" class="text-slate-800 dark:text-slate-200 hover:text-rose-600 dark:hover:text-rose-400 transition-colors">Gaming PCs</a>
+                <a href="#journey" class="text-slate-800 dark:text-slate-200 hover:text-rose-600 dark:hover:text-rose-400 transition-colors">Build Your PC</a>
+                <a href="#offers" class="text-slate-800 dark:text-slate-200 hover:text-rose-600 dark:hover:text-rose-400 transition-colors">Components</a>
+                <a href="#offers" class="text-slate-800 dark:text-slate-200 hover:text-rose-600 dark:hover:text-rose-400 transition-colors">Peripherals</a>
+                <a href="#footer" class="text-slate-800 dark:text-slate-200 hover:text-rose-600 dark:hover:text-rose-400 transition-colors">Business Solutions</a>
+            </nav>
+
+            <!-- Search, Wishlist, Account, Cart (Right) -->
+            <div class="flex items-center space-x-6 text-slate-700 dark:text-slate-300">
+                <!-- Search bar (Desktop) -->
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Search products..." class="border border-slate-200 dark:border-slate-800 dark:bg-slate-900 rounded-full px-4 py-1.5 pl-10 text-xs w-60 focus:outline-none focus:border-rose-500 transition-colors dark:text-slate-100">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-2.5 text-slate-400 text-xs"></i>
+                </div>
+
+                <!-- Icons Group -->
+                <div class="flex items-center space-x-4 text-lg">
+                    <!-- Mobile Search trigger -->
+                    <button class="md:hidden hover:text-rose-600 transition-colors">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                    <!-- Wishlist -->
+                    <a href="#" class="relative hover:text-rose-600 transition-colors" title="Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="wishlist-badge absolute -top-2 -right-2 bg-rose-600 text-white text-[9px] font-black h-4 w-4 rounded-full flex items-center justify-center hidden">0</span>
+                    </a>
+
+                    <!-- Profile Account -->
+                    <a href="#" class="hover:text-rose-600 transition-colors" title="Account">
+                        <i class="fa-regular fa-user"></i>
+                    </a>
+
+                    <!-- Cart -->
+                    <a href="#" class="relative hover:text-rose-600 transition-colors" title="Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-badge absolute -top-2 -right-2.5 bg-rose-600 text-white text-[9px] font-black h-4 w-4 rounded-full flex items-center justify-center">2</span>
+                    </a>
+
+                    <!-- Mobile Menu Hamburger button -->
+                    <button id="mobile-menu-btn" class="lg:hidden hover:text-rose-600 transition-colors">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-drawer" class="fixed inset-0 z-50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-between">
+        <div>
+            <!-- Close header -->
+            <div class="flex justify-between items-center p-6 border-b border-slate-100 dark:border-slate-800">
+                <span class="font-heading font-black text-slate-900 dark:text-white">NAVIGATION</span>
+                <button id="mobile-menu-close" class="text-slate-500 hover:text-rose-600 text-2xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <!-- Menu links -->
+            <nav class="flex flex-col p-6 space-y-6 text-lg font-bold">
+                <a href="#gaming-pcs" class="hover:text-rose-600 transition-colors">Gaming PCs</a>
+                <a href="#journey" class="hover:text-rose-600 transition-colors">Build Your PC</a>
+                <a href="#offers" class="hover:text-rose-600 transition-colors">Components</a>
+                <a href="#offers" class="hover:text-rose-600 transition-colors">Peripherals</a>
+                <a href="#footer" class="hover:text-rose-600 transition-colors">Business Solutions</a>
+            </nav>
+        </div>
+        <!-- Bottom panel -->
+        <div class="p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 space-y-4">
+            <div class="flex flex-col space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                <a href="tel:+919876543210"><i class="fa-solid fa-phone w-5 text-rose-600"></i> +91 98765 43210</a>
+                <a href="mailto:sales@challengerpc.com"><i class="fa-solid fa-envelope w-5 text-rose-600"></i> sales@challengerpc.com</a>
+            </div>
+            <div class="flex space-x-4 text-xl text-slate-700 dark:text-slate-300">
+                <a href="#" class="hover:text-rose-600"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-rose-600"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-rose-600"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed 3D Floating PC Connection (Follows scroll, morphs on every section) -->
+    <div id="floating-pc-connector" class="fixed top-[32%] right-10 w-48 h-48 hidden xl:flex flex-col items-center justify-center pointer-events-none z-30 select-none transition-all duration-700 opacity-0 transform translate-x-12">
+        <!-- Holographic Base Platform -->
+        <div class="absolute bottom-2 w-36 h-6 bg-rose-600/10 dark:bg-rose-500/20 border border-rose-500/20 rounded-full blur-[1px] holo-mesh animate-[pulse_3s_infinite]"></div>
+        
+        <!-- 3D Rotator Wrapper -->
+        <div id="floating-pc-rotator" class="w-36 h-36 relative transition-transform duration-100 ease-out">
+            <!-- Morphing PC image layers (using blend modes to get clean transparency) -->
+            <img id="float-stage-hero" src="assets/images/hero_pc.jpg" alt="Holo Rig PC" class="absolute inset-0 object-contain w-full h-full mix-blend-multiply dark:mix-blend-screen opacity-100 transition-all duration-500 scale-100">
+            <img id="float-stage-journey" src="assets/images/pc_high.jpg" alt="Holo Rig PC" class="absolute inset-0 object-contain w-full h-full mix-blend-multiply dark:mix-blend-screen opacity-0 transition-all duration-500 scale-75">
+            <img id="float-stage-rigs" src="assets/images/pc_extreme.jpg" alt="Holo Rig PC" class="absolute inset-0 object-contain w-full h-full mix-blend-multiply dark:mix-blend-screen opacity-0 transition-all duration-500 scale-75">
+            <img id="float-stage-offers" src="assets/images/pc_entry.jpg" alt="Holo Rig PC" class="absolute inset-0 object-contain w-full h-full mix-blend-multiply dark:mix-blend-screen opacity-0 transition-all duration-500 scale-75">
+        </div>
+        
+        <!-- Telemetry HUD Label -->
+        <div id="floating-pc-label" class="mt-4 bg-slate-900/90 dark:bg-slate-950/90 text-white dark:text-slate-350 border border-slate-700 dark:border-slate-800 text-[8px] font-mono px-2 py-0.5 rounded uppercase tracking-widest leading-none shadow-md">
+            HUD: ACTIVE_CHASSIS
+        </div>
+    </div>
+
+    <!-- Floating Tactical Case Power Button (Dark Mode Switcher) -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center space-x-3 select-none">
+        <div id="power-switch-label" class="bg-slate-900/90 dark:bg-slate-950/90 text-white dark:text-slate-100 px-3.5 py-1.5 rounded-xl border border-slate-700 dark:border-slate-800 text-xs font-black uppercase tracking-wider shadow-xl opacity-0 transform translate-x-4 transition-all duration-300 pointer-events-none">
+            LIGHTING: TOGGLE NIGHT GLOW
+        </div>
+        <button id="dark-mode-toggle" class="power-switch-btn flex items-center justify-center text-white" aria-label="Toggle Dark Mode" onmouseenter="document.getElementById('power-switch-label').classList.remove('opacity-0', 'translate-x-4')" onmouseleave="document.getElementById('power-switch-label').classList.add('opacity-0', 'translate-x-4')">
+            <div class="power-switch-led"></div>
+            <i class="fa-solid fa-power-off text-sm relative z-10 text-slate-300"></i>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-6 pb-20 overflow-hidden bg-gradient-to-br from-slate-50/50 via-white to-rose-50/10 dark:from-slate-950 dark:via-slate-950 dark:to-rose-950/5" data-holo-stage="hero">
+        
+        <!-- Background vector schematics in Hero -->
+        <div class="absolute top-[10%] right-[-5%] w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(225,29,72,0.02)_0%,transparent_60%)] border border-rose-500/5 rounded-full pointer-events-none -z-10 animate-[spin_100s_linear_infinite] hidden lg:block">
+            <svg viewBox="0 0 100 100" class="w-full h-full text-rose-500/10 dark:text-rose-500/5 stroke-current fill-none">
+                <circle cx="50" cy="50" r="45" stroke-dasharray="2 2"/>
+                <circle cx="50" cy="50" r="35"/>
+                <line x1="50" y1="5" x2="50" y2="95" stroke-dasharray="1 3"/>
+                <line x1="5" y1="50" x2="95" y2="50" stroke-dasharray="1 3"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 relative">
+            <!-- Cyber Diagnostics Bar -->
+            <div class="absolute top-0 right-4 text-[9px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-widest hidden md:block select-none">
+                [ LATENCY: 2ms ] [ VOLTAGE: 1.25V ] [ SYSTEM DIAGNOSTICS: OK ]
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-8">
+                
+                <!-- Left Content Column (5 cols) -->
+                <div class="lg:col-span-5 space-y-6 text-left reveal">
+                    <div class="inline-flex items-center space-x-2 bg-rose-50 dark:bg-rose-900/10 border border-rose-100 dark:border-rose-900/20 rounded-full px-3 py-1 text-xs font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">
+                        <i class="fa-solid fa-bolt-lightning text-amber-500"></i>
+                        <span>India's Premium Custom PC Brand</span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-tight tracking-tighter">
+                        BUILD YOUR<br>
+                        DREAM <span class="text-gradient">GAMING PC</span>
+                    </h1>
+
+                    <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed max-w-xl">
+                        High-performance custom gaming PCs built by experts using genuine components. Whether you're gaming, streaming, editing, or creating—we build exactly what you need.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#gaming-pcs" class="bg-rose-600 hover:bg-rose-700 text-white font-bold px-8 py-3.5 rounded-xl text-xs transition-all duration-300 transform hover:scale-[1.03] shadow-lg shadow-rose-600/20 uppercase tracking-wider flex items-center">
+                            Explore Gaming PCs <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                        </a>
+                        <a href="#journey" class="border-2 border-rose-600 text-rose-600 hover:bg-rose-50 dark:hover:bg-slate-900 font-bold px-8 py-3 rounded-xl text-xs transition-all duration-300 transform hover:scale-[1.03] uppercase tracking-wider">
+                            Build Your Own PC
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Middle Gaming PC Image Column with 3D Parallax & Hotspots (5 cols) -->
+                <div class="lg:col-span-5 flex justify-center items-center relative select-none mt-8 lg:mt-0 reveal">
+                    <!-- Tech background radial gradient -->
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(225,29,72,0.06)_0%,transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(225,29,72,0.1)_0%,transparent_70%)] rounded-full -z-10 w-96 h-96 mx-auto"></div>
+                    
+                    <!-- 3D Parallax Tilt PC Container -->
+                    <div class="relative float-pc max-w-md md:max-w-lg lg:max-w-full tilt-3d p-4 bg-white/40 dark:bg-slate-900/20 border border-slate-100/50 dark:border-slate-800/40 rounded-3xl shadow-sm glass-card">
+                        <img src="assets/images/hero_pc.jpg" alt="Ultimate Custom Gaming PC Case" class="object-contain w-full max-h-[480px]">
+
+                        <!-- Hotspot 1: Cooler -->
+                        <div class="hotspot absolute" style="top: 22%; left: 44%;">
+                            <div class="hotspot-pulse"></div>
+                            <div class="w-4 h-4 bg-rose-600 border-2 border-white rounded-full relative z-10 cursor-pointer shadow-md hover:scale-125 transition-transform"></div>
+                            <!-- Tooltip Card -->
+                            <div class="hotspot-tooltip absolute bottom-6 left-1/2 -translate-x-1/2 w-64 bg-slate-950/95 text-white p-4 rounded-xl shadow-2xl border border-slate-800 scale-0 opacity-0 transition-all duration-300 origin-bottom z-30 pointer-events-none">
+                                <h4 class="text-xs font-black uppercase text-rose-500 mb-1">LIQUID COOLER</h4>
+                                <h5 class="text-sm font-bold text-white mb-1">Galahad II LCD 360</h5>
+                                <p class="text-[11px] text-slate-400 leading-normal">Premium liquid cooling with a beautiful 2.8" LCD screen displaying CPU thermals and custom GIFs.</p>
+                            </div>
+                        </div>
+
+                        <!-- Hotspot 2: CPU -->
+                        <div class="hotspot absolute" style="top: 38%; left: 42%;">
+                            <div class="hotspot-pulse hotspot-pulse-yellow"></div>
+                            <div class="w-4 h-4 bg-amber-500 border-2 border-white rounded-full relative z-10 cursor-pointer shadow-md hover:scale-125 transition-transform"></div>
+                            <!-- Tooltip Card -->
+                            <div class="hotspot-tooltip absolute bottom-6 left-1/2 -translate-x-1/2 w-64 bg-slate-950/95 text-white p-4 rounded-xl shadow-2xl border border-slate-800 scale-0 opacity-0 transition-all duration-300 origin-bottom z-30 pointer-events-none">
+                                <h4 class="text-xs font-black uppercase text-amber-500 mb-1">PROCESSOR (CPU)</h4>
+                                <h5 class="text-sm font-bold text-white mb-1">Intel Core i9-14900K</h5>
+                                <p class="text-[11px] text-slate-400 leading-normal">Desktop power with 24 Cores / 32 Threads, running up to 6.0 GHz for supreme frame rates and workflow acceleration.</p>
+                            </div>
+                        </div>
+
+                        <!-- Hotspot 3: RAM -->
+                        <div class="hotspot absolute" style="top: 36%; left: 52%;">
+                            <div class="hotspot-pulse"></div>
+                            <div class="w-4 h-4 bg-rose-600 border-2 border-white rounded-full relative z-10 cursor-pointer shadow-md hover:scale-125 transition-transform"></div>
+                            <!-- Tooltip Card -->
+                            <div class="hotspot-tooltip absolute bottom-6 left-1/2 -translate-x-1/2 w-64 bg-slate-950/95 text-white p-4 rounded-xl shadow-2xl border border-slate-800 scale-0 opacity-0 transition-all duration-300 origin-bottom z-30 pointer-events-none">
+                                <h4 class="text-xs font-black uppercase text-rose-500 mb-1">MEMORY (RAM)</h4>
+                                <h5 class="text-sm font-bold text-white mb-1">32GB DDR5 Corsair RGB</h5>
+                                <p class="text-[11px] text-slate-400 leading-normal">6000MHz ultra-low latency RAM sticks equipped with customized addressable RGB lightbars.</p>
+                            </div>
+                        </div>
+
+                        <!-- Hotspot 4: GPU -->
+                        <div class="hotspot absolute" style="top: 55%; left: 45%;">
+                            <div class="hotspot-pulse hotspot-pulse-yellow"></div>
+                            <div class="w-4 h-4 bg-amber-500 border-2 border-white rounded-full relative z-10 cursor-pointer shadow-md hover:scale-125 transition-transform"></div>
+                            <!-- Tooltip Card -->
+                            <div class="hotspot-tooltip absolute bottom-6 left-1/2 -translate-x-1/2 w-64 bg-slate-950/95 text-white p-4 rounded-xl shadow-2xl border border-slate-800 scale-0 opacity-0 transition-all duration-300 origin-bottom z-30 pointer-events-none">
+                                <h4 class="text-xs font-black uppercase text-amber-500 mb-1">GRAPHICS CARD (GPU)</h4>
+                                <h5 class="text-sm font-bold text-white mb-1">GeForce RTX 4080 Super</h5>
+                                <p class="text-[11px] text-slate-400 leading-normal">16GB VRAM Ada Lovelace beast supporting real-time Ray Tracing and DLSS 3 frame generation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar Metrics (2 cols) -->
+                <div class="lg:col-span-2 hidden lg:flex flex-col space-y-6 pl-4 border-l border-slate-100 dark:border-slate-850 reveal py-4 bg-slate-50/50 dark:bg-slate-900/30 rounded-2xl p-5 border border-slate-200/50 dark:border-slate-800/40">
+                    <div class="space-y-1 z-10">
+                        <p class="text-2xl font-black text-rose-600 dark:text-rose-500 leading-none">10,000+</p>
+                        <p class="text-[9px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase">Custom PCs Built</p>
+                    </div>
+                    <div class="space-y-1 z-10">
+                        <p class="text-2xl font-black text-amber-500 leading-none">3</p>
+                        <p class="text-[9px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase">Experience Stores</p>
+                        <p class="text-[9px] font-black text-rose-600 dark:text-rose-500">IN CHENNAI</p>
+                    </div>
+                    <div class="space-y-1 z-10">
+                        <p class="text-2xl font-black text-rose-600 dark:text-rose-500 leading-none">100%</p>
+                        <p class="text-[9px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase">Genuine Parts</p>
+                    </div>
+                    <div class="space-y-1 z-10">
+                        <p class="text-2xl font-black text-amber-500 leading-none">LIFETIME</p>
+                        <p class="text-[9px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase">Technical Support</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Highlights Row -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mt-16 pt-8 border-t border-slate-100 dark:border-slate-850 text-center md:text-left reveal">
+                <!-- Highlight 1 -->
+                <div class="flex items-center space-x-3.5 col-span-1 justify-center md:justify-start">
+                    <div class="bg-rose-50 dark:bg-rose-950/20 h-10 w-10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-store text-rose-600 dark:text-rose-500"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-extrabold text-slate-800 dark:text-slate-200 leading-tight">3 Experience Stores</h4>
+                        <p class="text-[10px] text-slate-400 dark:text-slate-500">Visit and test builds in Chennai</p>
+                    </div>
+                </div>
+                <!-- Highlight 2 -->
+                <div class="flex items-center space-x-3.5 col-span-1 justify-center md:justify-start">
+                    <div class="bg-rose-50 dark:bg-rose-950/20 h-10 w-10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-bezier-curve text-rose-600 dark:text-rose-500"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-extrabold text-slate-800 dark:text-slate-200 leading-tight">Expert Cable Mgmt</h4>
+                        <p class="text-[10px] text-slate-400 dark:text-slate-500">Clean routing for thermal flow</p>
+                    </div>
+                </div>
+                <!-- Highlight 3 -->
+                <div class="flex items-center space-x-3.5 col-span-1 justify-center md:justify-start">
+                    <div class="bg-rose-50 dark:bg-rose-950/20 h-10 w-10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-headset text-rose-600 dark:text-rose-500"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-extrabold text-slate-800 dark:text-slate-200 leading-tight">Lifetime Support</h4>
+                        <p class="text-[10px] text-slate-400 dark:text-slate-500">Technical help whenever needed</p>
+                    </div>
+                </div>
+                <!-- Highlight 4 -->
+                <div class="flex items-center space-x-3.5 col-span-1 justify-center md:justify-start">
+                    <div class="bg-rose-50 dark:bg-rose-950/20 h-10 w-10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-shield-halved text-rose-600 dark:text-rose-500"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-extrabold text-slate-800 dark:text-slate-200 leading-tight">Genuine Components</h4>
+                        <p class="text-[10px] text-slate-400 dark:text-slate-500">Directly from authorized brands</p>
+                    </div>
+                </div>
+                <!-- Highlight 5 -->
+                <div class="flex items-center space-x-3.5 col-span-2 md:col-span-1 justify-center md:justify-start">
+                    <div class="bg-rose-50 dark:bg-rose-950/20 h-10 w-10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-truck text-rose-600 dark:text-rose-500"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-extrabold text-slate-800 dark:text-slate-200 leading-tight">Pan India Shipping</h4>
+                        <p class="text-[10px] text-slate-400 dark:text-slate-500">Fully insured courier to your door</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Choose Your Journey Section - BENTO GRID -->
+    <section id="journey" class="py-20 bg-white dark:bg-slate-950 relative border-t border-slate-100 dark:border-slate-900" data-holo-stage="journey">
+        
+        <!-- Subtle background schematic for Journey -->
+        <div class="absolute bottom-[5%] left-[-5%] w-80 h-80 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.01)_0%,transparent_60%)] border border-amber-500/5 rounded-full pointer-events-none -z-10 animate-[spin_80s_linear_infinite] hidden lg:block">
+            <svg viewBox="0 0 100 100" class="w-full h-full text-amber-500/10 dark:text-amber-500/5 stroke-current fill-none">
+                <circle cx="50" cy="50" r="40"/>
+                <circle cx="50" cy="50" r="30" stroke-dasharray="1 2"/>
+                <polygon points="50,15 80,75 20,75" stroke-dasharray="2 2"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-xl mx-auto mb-16 reveal">
+                <span class="text-[10px] font-extrabold tracking-widest text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-900/10 px-3 py-1 rounded-full uppercase border border-rose-100 dark:border-rose-900/20">[ DIRECTIVE journey ]</span>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight mt-3 uppercase">CHOOSE YOUR JOURNEY</h2>
+                <!-- Decorated red/yellow line -->
+                <div class="flex justify-center items-center space-x-1.5 mt-3">
+                    <div class="h-1 w-10 bg-rose-600 rounded-full"></div>
+                    <i class="fa-solid fa-crosshairs text-rose-600 text-xs"></i>
+                    <div class="h-1 w-10 bg-amber-500 rounded-full"></div>
+                </div>
+                <p class="text-slate-500 dark:text-slate-400 text-sm mt-4 leading-relaxed font-semibold">
+                    Select a workflow specialized category to begin exploring configurations or build your own from absolute scratch.
+                </p>
+            </div>
+
+            <!-- Bento Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+                
+                <!-- Bento Card 1: Gaming PCs (Double-Width) -->
+                <div class="journey-card md:col-span-2 h-80 relative group tilt-3d">
+                    <img src="https://images.unsplash.com/photo-1600861194942-f883de0fda96?auto=format&fit=crop&w=1000&q=80" alt="RTX Gaming Builds" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 z-10 flex flex-col justify-end p-8 text-white">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span class="text-xs font-black uppercase text-rose-500 tracking-wider bg-rose-950/40 border border-rose-900 px-2 py-0.5 rounded">Core Focus</span>
+                            <span class="text-xs font-black uppercase text-amber-400 tracking-wider">Gaming PCs</span>
+                        </div>
+                        <h3 class="text-2xl font-black font-heading leading-tight mb-2">Challenger Esports & Custom Gaming Builds</h3>
+                        <p class="text-slate-300 text-xs max-w-lg mb-4 hidden sm:block">Engineered for competitive FPS values, ultra 4K rendering, and stable frame synchronization across triple-A titles.</p>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-rose-400 font-bold uppercase tracking-wider">Explore RTX 40-Series Lineup <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i></span>
+                            <a href="#gaming-pcs" class="h-11 w-11 rounded-full bg-white text-rose-600 flex items-center justify-center transition-all duration-300 group-hover:bg-rose-600 group-hover:text-white transform group-hover:scale-110 shadow-lg">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Card 2: Editing Workstations (Standard-Width, Tall) -->
+                <div class="journey-card h-80 relative group tilt-3d">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Editing Workstation" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 z-10 flex flex-col justify-end p-8 text-white">
+                        <p class="text-xs font-black uppercase text-amber-400 tracking-wider mb-1">Creator Stations</p>
+                        <h3 class="text-xl font-black font-heading leading-tight mb-4">Video Editing & VFX</h3>
+                        
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-1.5">
+                                <span class="bg-indigo-950/60 text-indigo-300 text-[9px] font-extrabold px-2 py-0.5 rounded border border-indigo-900">Pr</span>
+                                <span class="bg-purple-950/60 text-purple-300 text-[9px] font-extrabold px-2 py-0.5 rounded border border-purple-900">Ae</span>
+                                <span class="bg-amber-950/60 text-amber-300 text-[9px] font-extrabold px-2 py-0.5 rounded border border-amber-900">DaVinci</span>
+                            </div>
+                            <a href="#gaming-pcs" class="h-10 w-10 rounded-full bg-white text-rose-600 flex items-center justify-center transition-all duration-300 group-hover:bg-rose-600 group-hover:text-white transform group-hover:scale-110">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Card 3: AI Rigs (Standard-Width) -->
+                <div class="journey-card h-80 relative group tilt-3d">
+                    <img src="https://images.unsplash.com/photo-1618005198143-d36674347781?auto=format&fit=crop&w=600&q=80" alt="AI Workstations" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 z-10 flex flex-col justify-end p-8 text-white">
+                        <p class="text-xs font-black uppercase text-amber-400 tracking-wider mb-1">Deep Learning</p>
+                        <h3 class="text-xl font-black font-heading leading-tight mb-4">AI Workstations</h3>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] text-slate-300 font-semibold tracking-wider">Dual RTX 450 Tensor Core support</span>
+                            <a href="#gaming-pcs" class="h-10 w-10 rounded-full bg-white text-rose-600 flex items-center justify-center transition-all duration-300 group-hover:bg-rose-600 group-hover:text-white transform group-hover:scale-110">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Card 4: Custom PC Builder (Double-Width) -->
+                <div class="journey-card md:col-span-2 h-80 relative group tilt-3d">
+                    <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1000&q=80" alt="Build Your Own" class="w-full h-full object-cover">
+                    
+                    <div class="absolute inset-0 z-10 flex flex-col sm:flex-row justify-between items-start sm:items-end p-8 text-white bg-slate-900/60 dark:bg-slate-950/60">
+                        <div class="space-y-2 mb-4 sm:mb-0 text-left">
+                            <span class="text-xs font-black uppercase text-amber-400 bg-amber-950/40 border border-amber-900 px-2 py-0.5 rounded tracking-wider">Interactive tool</span>
+                            <h3 class="text-2xl font-black font-heading leading-none">Custom PC Configurator</h3>
+                            <p class="text-xs text-slate-300 max-w-sm">Design your PC from the processor up. Our algorithm checks motherboard sizes, power supplies, cooler clearances, and connector pins automatically.</p>
+                        </div>
+                        
+                        <!-- Mini Specs Checklist panel -->
+                        <div class="bg-slate-900/80 dark:bg-slate-950/80 border border-slate-700/50 dark:border-slate-800 p-4 rounded-xl space-y-2 w-full sm:w-64">
+                            <p class="text-[9px] font-black text-rose-500 uppercase tracking-widest border-b border-slate-700 pb-1">Visualizer Directives</p>
+                            <ul class="text-[10px] text-slate-300 space-y-1 font-semibold">
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2 text-[8px]"></i> Real-time Clearance Check</li>
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2 text-[8px]"></i> Custom Liquid Loop Layouts</li>
+                                <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2 text-[8px]"></i> Sleeved Cable Colors</li>
+                            </ul>
+                            <a href="#journey" class="block w-full bg-amber-500 hover:bg-amber-600 text-slate-950 text-center font-black py-1.5 rounded-lg text-[9px] uppercase tracking-wider transition-colors mt-2">Initialize builder</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 3 & 4: Find Your Perfect PC - REDESIGNED AS HIGH-IMPACT PREMIUM CARD GRID -->
+    <section id="gaming-pcs" class="py-20 bg-slate-50 dark:bg-slate-900/30 border-y border-slate-100 dark:border-slate-900 relative" data-holo-stage="rigs">
+        
+        <!-- Blueprint vector graphic in Rig Showcase grid bg -->
+        <div class="absolute top-[40%] right-[-5%] w-80 h-80 bg-[radial-gradient(circle_at_center,rgba(225,29,72,0.01)_0%,transparent_60%)] border border-rose-500/5 rounded-full pointer-events-none -z-10 animate-[spin_90s_linear_infinite] hidden lg:block">
+            <svg viewBox="0 0 100 100" class="w-full h-full text-rose-500/10 dark:text-rose-500/5 stroke-current fill-none">
+                <circle cx="50" cy="50" r="45" stroke-dasharray="1 1"/>
+                <line x1="5" y1="5" x2="95" y2="95" stroke-dasharray="1 4"/>
+                <line x1="5" y1="95" x2="95" y2="5" stroke-dasharray="1 4"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 reveal">
+                <div class="max-w-xl text-left">
+                    <span class="text-[10px] font-extrabold tracking-widest text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-900/10 px-3 py-1 rounded-full uppercase border border-rose-100 dark:border-rose-900/20">[ RIG CONSOLE ]</span>
+                    <h2 class="text-3xl font-black text-slate-900 dark:text-white leading-tight mt-3 uppercase">FIND YOUR PERFECT RIG</h2>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-semibold">Explore custom rigs configured by our hardware engineers. Hover over the images to view live game frame rates.</p>
+                </div>
+                
+                <!-- Section 3 tabs switcher -->
+                <div class="flex items-center space-x-2 mt-6 md:mt-0 p-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl select-none">
+                    <button class="tab-btn px-4 py-2 rounded-lg text-xs font-bold uppercase transition-all duration-300 bg-rose-600 text-white border border-rose-600" data-tab="gaming">Gaming PCs</button>
+                    <button class="tab-btn px-4 py-2 rounded-lg text-xs font-bold uppercase transition-all duration-300 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-rose-300 dark:hover:border-rose-750" data-tab="editing">Editing PCs</button>
+                    <button class="tab-btn px-4 py-2 rounded-lg text-xs font-bold uppercase transition-all duration-300 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-rose-300 dark:hover:border-rose-750" data-tab="workstation">AI & Workstation</button>
+                </div>
+            </div>
+
+            <!-- Dynamic PC Cards Grid -->
+            <div id="pc-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 reveal">
+                <!-- Content rendered dynamically via JS -->
+            </div>
+
+            <!-- Section 4: Build By Budget -->
+            <div class="bg-white dark:bg-slate-950/65 border border-slate-200 dark:border-slate-800/80 rounded-3xl p-6 md:p-8 flex flex-col lg:flex-row justify-between items-center gap-8 reveal relative overflow-hidden">
+                <div class="w-full lg:w-[25%] text-center lg:text-left z-10">
+                    <h3 class="text-xl font-heading font-black text-slate-900 dark:text-white border-l-4 border-rose-600 pl-3 leading-none uppercase">BUILD BY BUDGET</h3>
+                    <p class="text-xs text-slate-400 mt-1">Select a starting budget below</p>
+                </div>
+
+                <!-- Budget Options Horizontal Scroll/Flex -->
+                <div class="w-full lg:w-[75%] flex flex-wrap justify-center lg:justify-end gap-3 select-none z-10">
+                    <button class="budget-btn border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-rose-500 hover:bg-rose-50/50 font-bold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-colors duration-200" data-budget="50000">
+                        ₹50K <span class="block text-[9px] font-semibold text-slate-400 lowercase leading-none mt-0.5">Entry Level</span>
+                    </button>
+                    <button class="budget-btn border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-rose-500 hover:bg-rose-50/50 font-bold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-colors duration-200" data-budget="75000">
+                        ₹75K <span class="block text-[9px] font-semibold text-slate-400 lowercase leading-none mt-0.5">Best Value</span>
+                    </button>
+                    <button class="budget-btn border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-rose-500 hover:bg-rose-50/50 font-bold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-colors duration-200" data-budget="100000">
+                        ₹1 Lakh <span class="block text-[9px] font-semibold text-slate-400 lowercase leading-none mt-0.5">Popular</span>
+                    </button>
+                    <button class="budget-btn border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-rose-500 hover:bg-rose-50/50 font-bold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-colors duration-200" data-budget="150000">
+                        ₹1.5 Lakh <span class="block text-[9px] font-semibold text-slate-400 lowercase leading-none mt-0.5">High Performance</span>
+                    </button>
+                    <button class="budget-btn border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-rose-500 hover:bg-rose-50/50 font-bold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-colors duration-200" data-budget="200000">
+                        ₹2 Lakh <span class="block text-[9px] font-semibold text-slate-400 lowercase leading-none mt-0.5">Enthusiast</span>
+                    </button>
+                    <button class="budget-btn border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-rose-500 hover:bg-rose-50/50 font-bold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-colors duration-200" data-budget="300000">
+                        ₹3 Lakh <span class="block text-[9px] font-semibold text-slate-400 lowercase leading-none mt-0.5">Extreme</span>
+                    </button>
+                    <button class="budget-btn border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-rose-500 hover:bg-rose-50/50 font-bold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-colors duration-200" data-budget="500000">
+                        ₹5 Lakh+ <span class="block text-[9px] font-semibold text-slate-400 lowercase leading-none mt-0.5">Ultimate</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 5: Top Selling Components & Best Offers -->
+    <section id="offers" class="py-20 bg-white dark:bg-slate-950 relative" data-holo-stage="offers">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <!-- Section Header -->
+            <div class="flex justify-between items-end mb-12 reveal">
+                <div class="max-w-md text-left">
+                    <span class="text-[10px] font-extrabold tracking-widest text-rose-600 dark:text-rose-455 bg-rose-50 dark:bg-rose-900/10 px-3 py-1 rounded-full uppercase border border-rose-100 dark:border-rose-900/20">[ DIRECTIVES inventory ]</span>
+                    <h2 class="text-3xl font-black text-slate-900 dark:text-white tracking-tight mt-3 leading-none uppercase">The Best Offers</h2>
+                    <p class="text-xs text-slate-400 mt-2">Hot components, hardware, and peripherals directly from authorized suppliers.</p>
+                </div>
+                <a href="#" class="hidden sm:inline-flex items-center text-xs font-bold text-rose-600 hover:text-rose-700 transition-colors uppercase tracking-wider">
+                    More Products <i class="fa-solid fa-chevron-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 reveal">
+                
+                <!-- Product 1: GPU -->
+                <div class="product-card bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-2xl p-4 flex flex-col justify-between relative group">
+                    <span class="absolute top-4 left-4 bg-rose-600 text-white font-black text-[9px] px-2 py-0.5 rounded-full uppercase tracking-wider z-10">HOT</span>
+                    
+                    <!-- Quick action side icons -->
+                    <div class="absolute top-4 right-4 flex flex-col space-y-2 z-10">
+                        <button class="quick-action-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Compare">
+                            <i class="fa-solid fa-arrow-right-arrow-left text-[11px]"></i>
+                        </button>
+                        <button class="quick-action-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Quick View">
+                            <i class="fa-solid fa-eye text-[11px]"></i>
+                        </button>
+                        <button class="quick-action-btn wishlist-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Add to Wishlist">
+                            <i class="fa-regular fa-heart text-[11px]"></i>
+                        </button>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="aspect-square w-full relative mb-4 flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800/60">
+                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=400&q=80" alt="Gigabyte GeForce RTX 4070" class="object-contain h-36 w-36 transition-transform duration-500 hover:scale-110">
+                    </div>
+
+                    <!-- Details -->
+                    <div class="flex-grow flex flex-col justify-between">
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-0.5">Graphics Cards</p>
+                            <h3 class="text-xs font-bold text-slate-800 dark:text-slate-200 line-clamp-2 hover:text-rose-600 transition-colors cursor-pointer mb-2">Gigabyte GeForce RTX 4070 Ti Super Windforce</h3>
+                            
+                            <!-- Tactical specs metrics -->
+                            <div class="grid grid-cols-2 gap-1 bg-slate-50 dark:bg-slate-950 p-2 rounded-lg text-[9px] text-slate-500 mb-3 border border-slate-100 dark:border-slate-850">
+                                <div><span class="block text-[8px] uppercase text-slate-400 leading-none">VRAM:</span> 16GB GDDR6X</div>
+                                <div><span class="block text-[8px] uppercase text-slate-400 leading-none">POWER:</span> 285W TDP</div>
+                            </div>
+
+                            <p class="text-[10px] font-semibold text-emerald-600 mb-4"><i class="fa-solid fa-circle-check mr-1 text-[8px]"></i> In stock</p>
+                        </div>
+
+                        <!-- Price & Cart -->
+                        <div>
+                            <div class="flex justify-between items-baseline mb-3">
+                                <div>
+                                    <span class="text-slate-400 dark:text-slate-500 line-through text-[11px]">₹89,999</span>
+                                    <span class="text-sm font-black text-rose-600 dark:text-rose-50 block leading-none mt-0.5">₹78,999</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart-btn w-full bg-slate-100 dark:bg-slate-800 hover:bg-rose-600 hover:text-white dark:hover:bg-rose-650 text-slate-800 dark:text-slate-200 dark:hover:text-white font-bold py-2 rounded-xl text-xs transition-colors duration-200 uppercase tracking-wider" data-product-name="RTX 4070 Ti Super GPU" data-product-price="₹78,999">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: CPU -->
+                <div class="product-card bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-2xl p-4 flex flex-col justify-between relative group">
+                    <span class="absolute top-4 left-4 bg-amber-500 text-white font-black text-[9px] px-2 py-0.5 rounded-full uppercase tracking-wider z-10">NEW</span>
+                    
+                    <div class="absolute top-4 right-4 flex flex-col space-y-2 z-10">
+                        <button class="quick-action-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-650 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Compare">
+                            <i class="fa-solid fa-arrow-right-arrow-left text-[11px]"></i>
+                        </button>
+                        <button class="quick-action-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-655 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Quick View">
+                            <i class="fa-solid fa-eye text-[11px]"></i>
+                        </button>
+                        <button class="quick-action-btn wishlist-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-650 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Add to Wishlist">
+                            <i class="fa-regular fa-heart text-[11px]"></i>
+                        </button>
+                    </div>
+
+                    <div class="aspect-square w-full relative mb-4 flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800/60">
+                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=400&q=80" alt="Intel Core i7" class="object-contain h-36 w-36 transition-transform duration-500 hover:scale-110">
+                    </div>
+
+                    <div class="flex-grow flex flex-col justify-between">
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-0.5">Processors</p>
+                            <h3 class="text-xs font-bold text-slate-800 dark:text-slate-200 line-clamp-2 hover:text-rose-600 transition-colors cursor-pointer mb-2">Intel Core i7-14700K Desktop Processor</h3>
+                            
+                            <div class="grid grid-cols-2 gap-1 bg-slate-50 dark:bg-slate-950 p-2 rounded-lg text-[9px] text-slate-500 mb-3 border border-slate-100 dark:border-slate-850">
+                                <div><span class="block text-[8px] uppercase text-slate-400 leading-none">CORES:</span> 20 (8P+12E)</div>
+                                <div><span class="block text-[8px] uppercase text-slate-400 leading-none">MAX CLOCK:</span> 5.6 GHz</div>
+                            </div>
+
+                            <p class="text-[10px] font-semibold text-emerald-600 mb-4"><i class="fa-solid fa-circle-check mr-1 text-[8px]"></i> In stock</p>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-baseline mb-3">
+                                <div>
+                                    <span class="text-slate-400 dark:text-slate-500 line-through text-[11px]">₹42,000</span>
+                                    <span class="text-sm font-black text-rose-600 block leading-none mt-0.5">₹36,499</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart-btn w-full bg-slate-100 dark:bg-slate-800 hover:bg-rose-600 hover:text-white dark:hover:bg-rose-655 text-slate-800 dark:text-slate-200 dark:hover:text-white font-bold py-2 rounded-xl text-xs transition-colors duration-200 uppercase tracking-wider" data-product-name="Intel Core i7 CPU" data-product-price="₹36,499">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Motherboard -->
+                <div class="product-card bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-2xl p-4 flex flex-col justify-between relative group">
+                    <span class="absolute top-4 left-4 bg-rose-600 text-white font-black text-[9px] px-2 py-0.5 rounded-full uppercase tracking-wider z-10">-12%</span>
+                    
+                    <div class="absolute top-4 right-4 flex flex-col space-y-2 z-10">
+                        <button class="quick-action-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Compare">
+                            <i class="fa-solid fa-arrow-right-arrow-left text-[11px]"></i>
+                        </button>
+                        <button class="quick-action-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Quick View">
+                            <i class="fa-solid fa-eye text-[11px]"></i>
+                        </button>
+                        <button class="quick-action-btn wishlist-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Add to Wishlist">
+                            <i class="fa-regular fa-heart text-[11px]"></i>
+                        </button>
+                    </div>
+
+                    <div class="aspect-square w-full relative mb-4 flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800/60">
+                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=400&q=80" alt="Gigabyte Z790 Aorus" class="object-contain h-36 w-36 transition-transform duration-500 hover:scale-110">
+                    </div>
+
+                    <div class="flex-grow flex flex-col justify-between">
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-0.5">Motherboards</p>
+                            <h3 class="text-xs font-bold text-slate-800 dark:text-slate-200 line-clamp-2 hover:text-rose-600 transition-colors cursor-pointer mb-2">Gigabyte Z790 Aorus Elite AX Motherboard</h3>
+                            
+                            <div class="grid grid-cols-2 gap-1 bg-slate-50 dark:bg-slate-950 p-2 rounded-lg text-[9px] text-slate-500 mb-3 border border-slate-100 dark:border-slate-850">
+                                <div><span class="block text-[8px] uppercase text-slate-400 leading-none">SOCKET:</span> LGA1700</div>
+                                <div><span class="block text-[8px] uppercase text-slate-400 leading-none">MEMORY:</span> DDR5 Max 192G</div>
+                            </div>
+
+                            <p class="text-[10px] font-semibold text-emerald-600 mb-4"><i class="fa-solid fa-circle-check mr-1 text-[8px]"></i> In stock</p>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-baseline mb-3">
+                                <div>
+                                    <span class="text-slate-400 dark:text-slate-500 line-through text-[11px]">₹32,000</span>
+                                    <span class="text-sm font-black text-rose-600 dark:text-rose-50 block leading-none mt-0.5">₹27,999</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart-btn w-full bg-slate-100 dark:bg-slate-800 hover:bg-rose-600 hover:text-white dark:hover:bg-rose-650 text-slate-800 dark:text-slate-200 dark:hover:text-white font-bold py-2 rounded-xl text-xs transition-colors duration-200 uppercase tracking-wider" data-product-name="Aorus Z790 Motherboard" data-product-price="₹27,999">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: RAM -->
+                <div class="product-card bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-2xl p-4 flex flex-col justify-between relative group">
+                    <span class="absolute top-4 left-4 bg-rose-600 text-white font-black text-[9px] px-2 py-0.5 rounded-full uppercase tracking-wider z-10">-17%</span>
+                    
+                    <div class="absolute top-4 right-4 flex flex-col space-y-2 z-10">
+                        <button class="quick-action-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-650 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Compare">
+                            <i class="fa-solid fa-arrow-right-arrow-left text-[11px]"></i>
+                        </button>
+                        <button class="quick-action-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-655 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Quick View">
+                            <i class="fa-solid fa-eye text-[11px]"></i>
+                        </button>
+                        <button class="quick-action-btn wishlist-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-650 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Add to Wishlist">
+                            <i class="fa-regular fa-heart text-[11px]"></i>
+                        </button>
+                    </div>
+
+                    <div class="aspect-square w-full relative mb-4 flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800/60">
+                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=400&q=80" alt="Corsair Vengeance" class="object-contain h-36 w-36 transition-transform duration-500 hover:scale-110">
+                    </div>
+
+                    <div class="flex-grow flex flex-col justify-between">
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-0.5">RAM Memory</p>
+                            <h3 class="text-xs font-bold text-slate-800 dark:text-slate-200 line-clamp-2 hover:text-rose-600 transition-colors cursor-pointer mb-2">Corsair Vengeance RGB 32GB (16x2) DDR5 6000MHz</h3>
+                            
+                            <div class="grid grid-cols-2 gap-1 bg-slate-50 dark:bg-slate-950 p-2 rounded-lg text-[9px] text-slate-500 mb-3 border border-slate-100 dark:border-slate-850">
+                                <div><span class="block text-[8px] uppercase text-slate-400 leading-none">LATENCY:</span> CL36 (1.35V)</div>
+                                <div><span class="block text-[8px] uppercase text-slate-400 leading-none">PROFILE:</span> Intel XMP 3.0</div>
+                            </div>
+
+                            <p class="text-[10px] font-semibold text-emerald-600 mb-4"><i class="fa-solid fa-circle-check mr-1 text-[8px]"></i> In stock</p>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-baseline mb-3">
+                                <div>
+                                    <span class="text-slate-400 dark:text-slate-500 line-through text-[11px]">₹14,000</span>
+                                    <span class="text-sm font-black text-rose-600 block leading-none mt-0.5">₹11,499</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart-btn w-full bg-slate-100 dark:bg-slate-800 hover:bg-rose-600 hover:text-white dark:hover:bg-rose-650 text-slate-800 dark:text-slate-200 dark:hover:text-white font-bold py-2 rounded-xl text-xs transition-colors duration-200 uppercase tracking-wider" data-product-name="Corsair 32GB DDR5 RAM" data-product-price="₹11,499">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Liquid Cooler -->
+                <div class="product-card bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-2xl p-4 flex flex-col justify-between relative group">
+                    <span class="absolute top-4 left-4 bg-rose-600 text-white font-black text-[9px] px-2 py-0.5 rounded-full uppercase tracking-wider z-10">-21%</span>
+                    
+                    <div class="absolute top-4 right-4 flex flex-col space-y-2 z-10">
+                        <button class="quick-action-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Compare">
+                            <i class="fa-solid fa-arrow-right-arrow-left text-[11px]"></i>
+                        </button>
+                        <button class="quick-action-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-605 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Quick View">
+                            <i class="fa-solid fa-eye text-[11px]"></i>
+                        </button>
+                        <button class="quick-action-btn wishlist-btn h-8 w-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-650 dark:text-slate-300 hover:text-rose-600 hover:border-rose-500 shadow-sm flex items-center justify-center transition-all duration-200" title="Add to Wishlist">
+                            <i class="fa-regular fa-heart text-[11px]"></i>
+                        </button>
+                    </div>
+
+                    <div class="aspect-square w-full relative mb-4 flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800/60">
+                        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=400&q=80" alt="Liquid Cooler" class="object-contain h-36 w-36 transition-transform duration-500 hover:scale-110">
+                    </div>
+
+                    <div class="flex-grow flex flex-col justify-between">
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-0.5">CPU Coolers</p>
+                            <h3 class="text-xs font-bold text-slate-800 dark:text-slate-200 line-clamp-2 hover:text-rose-600 transition-colors cursor-pointer mb-2">LIAN LI LIQMAX III 360 ARGB Liquid Cooler</h3>
+                            
+                            <div class="grid grid-cols-2 gap-1 bg-slate-50 dark:bg-slate-950 p-2 rounded-lg text-[9px] text-slate-500 mb-3 border border-slate-100 dark:border-slate-850">
+                                <div><span class="block text-[8px] uppercase text-slate-400 leading-none">RADIATOR:</span> 360mm Aluminum</div>
+                                <div><span class="block text-[8px] uppercase text-slate-400 leading-none">LED TYPE:</span> 5V Addressable RGB</div>
+                            </div>
+
+                            <p class="text-[10px] font-semibold text-emerald-600 mb-4"><i class="fa-solid fa-circle-check mr-1 text-[8px]"></i> In stock</p>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-baseline mb-3">
+                                <div>
+                                    <span class="text-slate-400 dark:text-slate-500 line-through text-[11px]">₹16,000</span>
+                                    <span class="text-sm font-black text-rose-600 block leading-none mt-0.5">₹12,499</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart-btn w-full bg-slate-100 dark:bg-slate-800 hover:bg-rose-600 hover:text-white dark:hover:bg-rose-650 text-slate-800 dark:text-slate-200 dark:hover:text-white font-bold py-2 rounded-xl text-xs transition-colors duration-200 uppercase tracking-wider" data-product-name="LIAN LI 360 Liquid Cooler" data-product-price="₹12,499">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t-2 border-rose-600 relative overflow-hidden">
+        <!-- Footer background grid -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.05)_0%,transparent_50%)] -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Column 1: About -->
+                <div class="space-y-4 text-left">
+                    <a href="#" class="flex items-center space-x-3 group">
+                        <div class="h-9 w-9 flex items-center justify-center overflow-hidden bg-white p-0.5 rounded-lg">
+                            <img src="assets/images/logo.png" alt="Challenger Computers Logo" class="object-contain h-7 w-7">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-lg font-black tracking-tight leading-none text-white font-heading">
+                                CHALLENGER
+                            </span>
+                            <span class="text-[8px] font-extrabold tracking-widest leading-none text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-amber-500 uppercase mt-0.5">
+                                BUILD YOUR PC
+                            </span>
+                        </div>
+                    </a>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Challenger Computers is India's custom PC company specializing in tailor-made high-performance rigs. From esports workstations to enterprise deep learning servers, we assemble computers with strict quality controls and lifetime support.
+                    </p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="#" class="h-8 w-8 rounded-full bg-slate-800 hover:bg-rose-600 text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                        <a href="#" class="h-8 w-8 rounded-full bg-slate-800 hover:bg-rose-600 text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram text-sm"></i></a>
+                        <a href="#" class="h-8 w-8 rounded-full bg-slate-800 hover:bg-rose-600 text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                        <a href="#" class="h-8 w-8 rounded-full bg-slate-800 hover:bg-rose-600 text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-youtube text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="space-y-4 text-left">
+                    <h3 class="text-sm font-black uppercase text-white tracking-wider border-l-2 border-rose-600 pl-3 leading-none font-heading">Quick Links</h3>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="#gaming-pcs" class="hover:text-white transition-colors">Prebuilt Gaming PCs</a></li>
+                        <li><a href="#journey" class="hover:text-white transition-colors">Custom PC Configurator</a></li>
+                        <li><a href="#offers" class="hover:text-white transition-colors">Graphics Cards & Processors</a></li>
+                        <li><a href="#offers" class="hover:text-white transition-colors">Gigabyte Component Store</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Support & Drivers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Warranty & Return Policies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="space-y-4 text-left">
+                    <h3 class="text-sm font-black uppercase text-white tracking-wider border-l-2 border-rose-600 pl-3 leading-none font-heading">Contact Us</h3>
+                    <ul class="space-y-3 text-xs text-slate-400">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot mr-2.5 mt-0.5 text-rose-600"></i>
+                            <span>No. 45, Mount Road, Ritz Complex,<br>Anna Salai, Chennai - 600002</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone mr-2.5 text-rose-600"></i>
+                            <a href="tel:+919876543210" class="hover:text-white transition-colors">+91 98765 43210</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope mr-2.5 text-rose-600"></i>
+                            <a href="mailto:support@challengerpc.com" class="hover:text-white transition-colors">support@challengerpc.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-clock mr-2.5 mt-0.5 text-rose-600"></i>
+                            <span>Mon - Sat: 10:00 AM - 8:00 PM<br>Sunday: Closed</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="space-y-4 text-left">
+                    <h3 class="text-sm font-black uppercase text-white tracking-wider border-l-2 border-rose-600 pl-3 leading-none font-heading">Join the Grid</h3>
+                    <p class="text-xs text-slate-400">Subscribe for custom build guides, giveaways, and discount codes.</p>
+                    <form class="flex flex-col space-y-2" onsubmit="event.preventDefault(); alert('Subscribed!')">
+                        <input type="email" placeholder="Your Email Address" class="bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-rose-500 w-full" required>
+                        <button type="submit" class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider transition-colors">Subscribe</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-[10px] text-slate-500">
+                    &copy; 2026 Challenger Computers. All rights reserved. Designed for Challenger Build Your PC.
+                </p>
+
+                <!-- Payment methods -->
+                <div class="flex items-center space-x-3 text-2xl text-slate-600 select-none">
+                    <i class="fa-brands fa-cc-visa hover:text-white transition-colors" title="Visa"></i>
+                    <i class="fa-brands fa-cc-mastercard hover:text-white transition-colors" title="Mastercard"></i>
+                    <i class="fa-brands fa-cc-stripe hover:text-white transition-colors" title="Stripe"></i>
+                    <i class="fa-solid fa-money-check hover:text-white transition-colors" title="NetBanking"></i>
+                    <span class="text-[9px] font-black border border-slate-700 px-1.5 py-0.5 rounded text-slate-500 hover:text-white hover:border-slate-500 transition-colors uppercase tracking-wider">UPI / EMI</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom App JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
