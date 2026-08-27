@@ -16,6 +16,10 @@
                             red: '#e11d48',
                             yellow: '#f59e0b',
                         }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+                        heading: ['Sora', 'ui-sans-serif', 'system-ui'],
                     }
                 }
             }
@@ -197,150 +201,164 @@
             <!-- Cyber Diagnostics Bar -->
             <div class="absolute top-0 right-4 text-[9px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-widest hidden md:block select-none">
                 [ LATENCY: 2ms ] [ VOLTAGE: 1.25V ] [ SYSTEM DIAGNOSTICS: OK ]
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-8">
                 
-                <!-- Left Content Column (5 cols) -->
-                <div class="lg:col-span-5 space-y-6 text-left reveal">
-                    <div class="inline-flex items-center space-x-2 bg-rose-50 dark:bg-rose-950/30 border border-rose-100 dark:border-rose-900/40 rounded-full px-3.5 py-1.5 text-[10px] sm:text-xs font-black text-rose-600 dark:text-rose-400 uppercase tracking-widest relative">
-                        <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-600"></span>
-                        </span>
+                <!-- Left Column: Typography & Configurator Deck (lg:col-span-6) -->
+                <div class="lg:col-span-6 space-y-6 text-left reveal">
+                    <div class="inline-flex items-center space-x-2 bg-rose-50 dark:bg-rose-900/10 border border-rose-100 dark:border-rose-900/20 rounded-full px-3 py-1.5 text-xs font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">
+                        <i class="fa-solid fa-bolt-lightning text-amber-500"></i>
                         <span>India's Premium Custom PC Brand</span>
                     </div>
 
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white leading-[1.1] tracking-tight relative">
-                        <span class="text-xs font-mono font-bold text-rose-500 tracking-[0.3em] block mb-2 opacity-75">[ TELEMETRY INITIALIZED ]</span>
-                        BUILD YOUR<br>
-                        DREAM <span class="text-gradient drop-shadow-[0_2px_10px_rgba(225,29,72,0.15)]">GAMING PC</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-[54px] font-black text-slate-900 dark:text-white leading-[1.15] tracking-tight uppercase">
+                        BUILD YOUR OWN<br>
+                        <span class="text-gradient">ULTIMATE PC</span>
                     </h1>
 
-                    <p class="text-slate-500 dark:text-slate-455 text-xs sm:text-sm leading-relaxed max-w-xl font-medium">
-                        High-performance custom gaming PCs built by experts using genuine components. Whether you're gaming, streaming, editing, or creating—we build exactly what you need.
+                    <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed max-w-xl font-medium">
+                        High-performance custom gaming PCs built by experts using genuine components. Toggle the console below to simulate your chassis specs and estimate performance.
                     </p>
 
-                    <!-- CTAs -->
+                    <!-- Interactive Configurator Cockpit Card -->
+                    <div class="bg-slate-50/50 dark:bg-slate-900/20 backdrop-blur-sm border border-slate-200/60 dark:border-slate-800/60 p-5 rounded-3xl space-y-4 shadow-sm relative overflow-hidden">
+                        
+                        <!-- Header badge -->
+                        <div class="flex justify-between items-center border-b border-slate-200/60 dark:border-slate-800 pb-2">
+                            <span class="text-[9px] font-mono text-rose-500 font-bold uppercase tracking-widest">[ DECK DIRECTIVE CONFIG ]</span>
+                            <span class="text-[9px] font-mono text-emerald-500 font-bold uppercase tracking-widest flex items-center">
+                                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 mr-1 animate-pulse"></span> ONLINE
+                            </span>
+                        </div>
+
+                        <!-- 1. CPU Selector -->
+                        <div class="space-y-1.5">
+                            <span class="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider block text-left">Processor (CPU)</span>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button class="hero-cfg-btn active border border-rose-500 bg-rose-50/20 dark:bg-rose-950/20 text-rose-600 dark:text-rose-455 text-[10px] font-black uppercase py-2 rounded-xl transition-all duration-200" data-cat="cpu" data-add="0" data-val="Ryzen 5" data-perf="0">Ryzen 5</button>
+                                <button class="hero-cfg-btn border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-400 hover:border-slate-350 text-[10px] font-black uppercase py-2 rounded-xl transition-all duration-200" data-cat="cpu" data-add="15000" data-val="Core i7" data-perf="15">Core i7</button>
+                                <button class="hero-cfg-btn border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-400 hover:border-slate-350 text-[10px] font-black uppercase py-2 rounded-xl transition-all duration-200" data-cat="cpu" data-add="45000" data-val="Ryzen 9" data-perf="25">Ryzen 9</button>
+                            </div>
+                        </div>
+
+                        <!-- 2. GPU Selector -->
+                        <div class="space-y-1.5">
+                            <span class="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider block text-left">Graphics Card (GPU)</span>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button class="hero-cfg-btn active border border-rose-500 bg-rose-50/20 dark:bg-rose-950/20 text-rose-600 dark:text-rose-455 text-[10px] font-black uppercase py-2 rounded-xl transition-all duration-200" data-cat="gpu" data-add="0" data-val="RTX 4060" data-perf="0">RTX 4060</button>
+                                <button class="hero-cfg-btn border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-400 hover:border-slate-350 text-[10px] font-black uppercase py-2 rounded-xl transition-all duration-200" data-cat="gpu" data-add="35000" data-val="RTX 4070S" data-perf="20">RTX 4070S</button>
+                                <button class="hero-cfg-btn border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-400 hover:border-slate-350 text-[10px] font-black uppercase py-2 rounded-xl transition-all duration-200" data-cat="gpu" data-add="150000" data-val="RTX 4090" data-perf="30">RTX 4090</button>
+                            </div>
+                        </div>
+
+                        <!-- 3. Cooling Selector -->
+                        <div class="space-y-1.5">
+                            <span class="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider block text-left">Liquid Cooling</span>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button class="hero-cfg-btn active border border-rose-500 bg-rose-50/20 dark:bg-rose-950/20 text-rose-600 dark:text-rose-455 text-[10px] font-black uppercase py-2 rounded-xl transition-all duration-200" data-cat="cool" data-add="0" data-val="Air Cooled" data-perf="0">Air Cooler</button>
+                                <button class="hero-cfg-btn border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-400 hover:border-slate-350 text-[10px] font-black uppercase py-2 rounded-xl transition-all duration-200" data-cat="cool" data-add="6000" data-val="240mm AIO" data-perf="5">240mm AIO</button>
+                                <button class="hero-cfg-btn border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-400 hover:border-slate-350 text-[10px] font-black uppercase py-2 rounded-xl transition-all duration-200" data-cat="cool" data-add="25000" data-val="Custom Loop" data-perf="10">Custom Loop</button>
+                            </div>
+                        </div>
+
+                        <!-- Price & Metric Display Inner -->
+                        <div class="grid grid-cols-2 gap-4 pt-3 border-t border-slate-200/60 dark:border-slate-800">
+                            <!-- Live calculated Price -->
+                            <div class="text-left">
+                                <span class="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider leading-none">Est. Build Price</span>
+                                <p id="hero-price-display" class="text-2xl font-black text-slate-900 dark:text-white mt-1 leading-none">₹54,999</p>
+                            </div>
+                            
+                            <!-- Performance Dial progress bar -->
+                            <div class="flex flex-col justify-center text-left">
+                                <div class="flex justify-between text-[9px] font-bold text-slate-500 dark:text-slate-400 leading-none mb-1.5">
+                                    <span>PERFORMANCE SCALE</span>
+                                    <span id="hero-perf-pct" class="text-rose-600 dark:text-rose-500">60%</span>
+                                </div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                                    <div id="hero-perf-bar" class="h-full bg-gradient-to-r from-rose-500 to-amber-500 rounded-full transition-all duration-500 ease-out" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Action buttons -->
                     <div class="flex flex-wrap gap-4 pt-2">
-                        <a href="#gaming-pcs" class="bg-gradient-to-r from-rose-600 to-amber-500 hover:from-rose-700 hover:to-amber-600 text-white font-extrabold px-8 py-4 rounded-xl text-xs transition-all duration-300 transform hover:scale-[1.03] shadow-lg shadow-rose-600/25 uppercase tracking-wider flex items-center group">
-                            Explore Gaming PCs <i class="fa-solid fa-chevron-right ml-2 text-[10px] transition-transform duration-300 group-hover:translate-x-1"></i>
-                        </a>
-                        <a href="#journey" class="border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/30 backdrop-blur-sm text-slate-800 dark:text-slate-300 hover:text-rose-650 dark:hover:text-rose-455 hover:border-rose-500/50 font-extrabold px-8 py-4 rounded-xl text-xs transition-all duration-300 transform hover:scale-[1.03] uppercase tracking-wider">
-                            Build Your Own PC
+                        <button id="hero-cfg-order" class="bg-gradient-to-r from-rose-600 to-amber-500 hover:from-rose-700 hover:to-amber-600 text-white font-extrabold px-8 py-4 rounded-xl text-xs transition-all duration-300 transform hover:scale-[1.03] shadow-lg shadow-rose-600/25 uppercase tracking-wider flex items-center">
+                            Order Custom Build <i class="fa-solid fa-chevron-right ml-2 text-[10px]"></i>
+                        </button>
+                        <a href="#gaming-pcs" class="border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/30 backdrop-blur-sm text-slate-800 dark:text-slate-350 hover:text-rose-650 dark:hover:text-rose-455 hover:border-rose-500/50 font-extrabold px-8 py-4 rounded-xl text-xs transition-all duration-300 transform hover:scale-[1.03] uppercase tracking-wider">
+                            Explore Prebuilts
                         </a>
                     </div>
                 </div>
 
-                      <!-- Middle Gaming PC Image Column with Sleek Dark Showcase Chamber & Hotspots (5 cols) -->
-                <div class="lg:col-span-5 flex justify-center items-center relative select-none mt-8 lg:mt-0 reveal">
-                    <!-- Subtle background glow -->
-                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.08)_0%,transparent_70%)] rounded-full -z-10 w-96 h-96 mx-auto"></div>
+                <!-- Right Column: Immersive 3D Showroom Chambers & HUD lines (lg:col-span-6) -->
+                <div class="lg:col-span-6 flex justify-center items-center relative select-none mt-8 lg:mt-0 reveal">
                     
-                    <!-- Showcase Chamber Card (Always dark slate for seamless black image background blending) -->
-                    <div class="relative float-pc max-w-md md:max-w-lg lg:max-w-full tilt-3d p-4 bg-slate-950/95 dark:bg-slate-900/30 border border-slate-850/80 rounded-[32px] shadow-2xl neon-glow-rose z-10">
-                        
+                    <!-- Cyber holographic vector base loop -->
+                    <div class="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-64 h-12 bg-rose-600/10 dark:bg-rose-500/25 border-2 border-dashed border-rose-500/30 rounded-full blur-[2px] transform rotateX(75deg) animate-[spin_40s_linear_infinite]"></div>
+                    
+                    <div class="relative float-pc max-w-md md:max-w-lg lg:max-w-full tilt-3d p-4 bg-slate-950/95 dark:bg-slate-900/30 border border-slate-850/80 rounded-[32px] shadow-2xl z-10">
                         <!-- Mini Corner Decals for HUD feel -->
                         <div class="absolute top-3 left-3 w-3 h-3 border-t border-l border-slate-700 rounded-tl-sm opacity-50"></div>
                         <div class="absolute top-3 right-3 w-3 h-3 border-t border-r border-slate-700 rounded-tr-sm opacity-50"></div>
                         <div class="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-slate-700 rounded-bl-sm opacity-50"></div>
                         <div class="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-slate-700 rounded-br-sm opacity-50"></div>
 
-                        <!-- Image Chamber (black background PC case blends perfectly here) -->
+                        <!-- Image Chamber -->
                         <div class="overflow-hidden rounded-2xl bg-black">
                             <img src="assets/images/hero_pc_new.jpg" alt="Challenger Custom Gaming PC" class="object-contain w-full max-h-[440px]">
                         </div>
 
-                        <!-- Hotspot 1: CPU Cooler -->
-                        <div class="hotspot absolute" style="top: 40%; left: 45%;">
-                            <div class="hotspot-pulse"></div>
-                            <div class="w-3.5 h-3.5 bg-rose-600 border-2 border-white rounded-full relative z-10 cursor-pointer shadow-md hover:scale-125 transition-transform"></div>
-                            <!-- Tooltip Card -->
-                            <div class="hotspot-tooltip absolute bottom-6 left-1/2 -translate-x-1/2 w-64 bg-slate-950/95 text-white p-4 rounded-xl shadow-2xl border border-slate-800 scale-0 opacity-0 transition-all duration-300 origin-bottom z-30 pointer-events-none">
-                                <h4 class="text-xs font-black uppercase text-rose-500 mb-1">LIQUID COOLING</h4>
-                                <h5 class="text-sm font-bold text-white mb-1">EK-Quantum Velocity²</h5>
-                                <p class="text-[11px] text-slate-400 leading-normal">High-performance custom CPU water block featuring signature EK cooling engine and gorgeous D-RGB lighting.</p>
+                        <!-- Callout overlay 1 (CPU callout) -->
+                        <div class="absolute top-24 left-[-20px] bg-slate-950/80 backdrop-blur-md border border-slate-800 px-3 py-1.5 rounded-lg flex items-center space-x-2 shadow-xl z-20 transition-all duration-300 border-l-4 border-l-rose-600" id="hud-cpu-callout">
+                            <i class="fa-solid fa-microchip text-rose-500 text-[10px]"></i>
+                            <div class="text-left leading-tight">
+                                <span class="text-[7px] text-slate-500 uppercase block font-mono">CPU STAGE</span>
+                                <span class="text-[9px] font-bold text-white font-mono" id="hud-cpu-val">Ryzen 5</span>
                             </div>
                         </div>
 
-                        <!-- Hotspot 2: RAM -->
-                        <div class="hotspot absolute" style="top: 38%; left: 52%;">
-                            <div class="hotspot-pulse"></div>
-                            <div class="w-3.5 h-3.5 bg-rose-600 border-2 border-white rounded-full relative z-10 cursor-pointer shadow-md hover:scale-125 transition-transform"></div>
-                            <!-- Tooltip Card -->
-                            <div class="hotspot-tooltip absolute bottom-6 left-1/2 -translate-x-1/2 w-64 bg-slate-950/95 text-white p-4 rounded-xl shadow-2xl border border-slate-800 scale-0 opacity-0 transition-all duration-300 origin-bottom z-30 pointer-events-none">
-                                <h4 class="text-xs font-black uppercase text-rose-500 mb-1">MEMORY (RAM)</h4>
-                                <h5 class="text-sm font-bold text-white mb-1">32GB DDR5 Corsair RGB</h5>
-                                <p class="text-[11px] text-slate-400 leading-normal">High-performance 6000MHz low-latency RAM sticks with customizable dynamic RGB lighting profiles.</p>
+                        <!-- Callout overlay 2 (GPU callout) -->
+                        <div class="absolute bottom-24 left-[-25px] bg-slate-950/80 backdrop-blur-md border border-slate-800 px-3 py-1.5 rounded-lg flex items-center space-x-2 shadow-xl z-20 transition-all duration-300 border-l-4 border-l-amber-500" id="hud-gpu-callout">
+                            <i class="fa-solid fa-bolt-lightning text-amber-500 text-[10px]"></i>
+                            <div class="text-left leading-tight">
+                                <span class="text-[7px] text-slate-500 uppercase block font-mono">GPU STAGE</span>
+                                <span class="text-[9px] font-bold text-white font-mono" id="hud-gpu-val">RTX 4060</span>
                             </div>
                         </div>
 
-                        <!-- Hotspot 3: GPU -->
-                        <div class="hotspot absolute" style="top: 62%; left: 40%;">
-                            <div class="hotspot-pulse hotspot-pulse-yellow"></div>
-                            <div class="w-3.5 h-3.5 bg-amber-500 border-2 border-white rounded-full relative z-10 cursor-pointer shadow-md hover:scale-125 transition-transform"></div>
-                            <!-- Tooltip Card -->
-                            <div class="hotspot-tooltip absolute bottom-6 left-1/2 -translate-x-1/2 w-64 bg-slate-950/95 text-white p-4 rounded-xl shadow-2xl border border-slate-800 scale-0 opacity-0 transition-all duration-300 origin-bottom z-30 pointer-events-none">
-                                <h4 class="text-xs font-black uppercase text-amber-500 mb-1">GRAPHICS CARD (GPU)</h4>
-                                <h5 class="text-sm font-bold text-white mb-1">Dual GeForce RTX 450 Super</h5>
-                                <p class="text-[11px] text-slate-400 leading-normal">Extreme dual water-blocked GPUs in SLI/nvlink configuration providing ultimate rendering frame rates.</p>
+                        <!-- Callout overlay 3 (Cooling callout) -->
+                        <div class="absolute top-36 right-[-25px] bg-slate-950/80 backdrop-blur-md border border-slate-800 px-3 py-1.5 rounded-lg flex items-center space-x-2 shadow-xl z-20 transition-all duration-300 border-l-4 border-l-rose-600" id="hud-cool-callout">
+                            <i class="fa-solid fa-water text-rose-500 text-[10px]"></i>
+                            <div class="text-left leading-tight">
+                                <span class="text-[7px] text-slate-500 uppercase block font-mono">SYS COOLING</span>
+                                <span class="text-[9px] font-bold text-white font-mono" id="hud-cool-val">Air Cooled</span>
                             </div>
                         </div>
 
-                        <!-- Hotspot 4: Distro Plate Reservoir -->
-                        <div class="hotspot absolute" style="top: 45%; left: 75%;">
-                            <div class="hotspot-pulse hotspot-pulse-yellow"></div>
-                            <div class="w-3.5 h-3.5 bg-amber-500 border-2 border-white rounded-full relative z-10 cursor-pointer shadow-md hover:scale-125 transition-transform"></div>
-                            <!-- Tooltip Card -->
-                            <div class="hotspot-tooltip absolute bottom-6 left-1/2 -translate-x-1/2 w-64 bg-slate-950/95 text-white p-4 rounded-xl shadow-2xl border border-slate-800 scale-0 opacity-0 transition-all duration-300 origin-bottom z-30 pointer-events-none">
-                                <h4 class="text-xs font-black uppercase text-amber-500 mb-1">DISTRIBUTION PLATE</h4>
-                                <h5 class="text-sm font-bold text-white mb-1">EK-Quantum Reflection²</h5>
-                                <p class="text-[11px] text-slate-400 leading-normal">Custom acrylic distribution reservoir with integrated D5 pump, routing coolant liquid loop elegantly.</p>
+                        <!-- Telemetry monitor overlay -->
+                        <div class="absolute bottom-4 right-4 bg-slate-950/85 backdrop-blur-md border border-slate-800 p-3.5 rounded-xl space-y-1.5 w-44 pointer-events-none text-left shadow-2xl z-20">
+                            <p class="text-[8px] font-mono text-rose-500 font-bold uppercase tracking-widest">[ DIAGNOSTIC READOUT ]</p>
+                            <div class="flex justify-between text-[9px] font-mono text-slate-350">
+                                <span>SYS TEMP:</span>
+                                <span id="telemetry-temp" class="text-emerald-400 font-bold">34°C</span>
+                            </div>
+                            <div class="flex justify-between text-[9px] font-mono text-slate-350">
+                                <span>SYS FANS:</span>
+                                <span id="telemetry-fans" class="text-amber-400 font-bold">1420 RPM</span>
+                            </div>
+                            <div class="flex justify-between text-[9px] font-mono text-slate-350">
+                                <span>V-STAGE:</span>
+                                <span class="text-rose-500 font-bold">1.22V</span>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
-                <!-- Right Sidebar Metrics (2 cols) - Cyber HUD Panels -->
-                <div class="lg:col-span-2 hidden lg:flex flex-col space-y-4 pl-4 border-l border-slate-200/50 dark:border-slate-800 reveal py-4 select-none">
-                    
-                    <div class="relative bg-slate-50/40 dark:bg-slate-900/20 backdrop-blur-sm border border-slate-200/60 dark:border-slate-800/60 rounded-2xl p-4 transition-all duration-300 hover:border-rose-500/40">
-                        <span class="absolute top-2.5 right-2.5 flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-450 opacity-60"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                        </span>
-                        <p class="text-2xl font-black text-rose-600 dark:text-rose-500 leading-none">10,000+</p>
-                        <p class="text-[9px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase mt-1">Custom PCs Built</p>
-                    </div>
-
-                    <div class="relative bg-slate-50/40 dark:bg-slate-900/20 backdrop-blur-sm border border-slate-200/60 dark:border-slate-800/60 rounded-2xl p-4 transition-all duration-300 hover:border-rose-500/40">
-                        <span class="absolute top-2.5 right-2.5 flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-450 opacity-60"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                        </span>
-                        <p class="text-2xl font-black text-amber-500 leading-none">3</p>
-                        <p class="text-[9px] font-bold text-slate-400 dark:text-slate-550 tracking-wider uppercase mt-1">Experience Stores</p>
-                        <p class="text-[8px] font-black text-rose-600 dark:text-rose-500 tracking-wider uppercase mt-0.5">IN CHENNAI</p>
-                    </div>
-
-                    <div class="relative bg-slate-50/40 dark:bg-slate-900/20 backdrop-blur-sm border border-slate-200/60 dark:border-slate-800/60 rounded-2xl p-4 transition-all duration-300 hover:border-rose-500/40">
-                        <span class="absolute top-2.5 right-2.5 flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-450 opacity-60"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                        </span>
-                        <p class="text-2xl font-black text-rose-600 dark:text-rose-500 leading-none">100%</p>
-                        <p class="text-[9px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase mt-1">Genuine Parts</p>
-                    </div>
-
-                    <div class="relative bg-slate-50/40 dark:bg-slate-900/20 backdrop-blur-sm border border-slate-200/60 dark:border-slate-800/60 rounded-2xl p-4 transition-all duration-300 hover:border-rose-500/40">
-                        <span class="absolute top-2.5 right-2.5 flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-450 opacity-60"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                        </span>
-                        <p class="text-2xl font-black text-amber-500 leading-none">LIFETIME</p>
-                        <p class="text-[9px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase mt-1">Technical Support</p>
-                    </div>
-                </div>
+            </div>
 
             </div>
 

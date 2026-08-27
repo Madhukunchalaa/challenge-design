@@ -1,5 +1,5 @@
 /* Imports */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
 
 /* Brand Theme Variables */
 :root {
@@ -7,7 +7,7 @@
     --brand-red-dark: #be123c; /* Red-700 */
     --brand-yellow: #f59e0b; /* Amber-500 */
     --brand-yellow-light: #fbbf24; /* Amber-400 */
-    --font-heading: 'Outfit', sans-serif;
+    --font-heading: 'Sora', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
 
