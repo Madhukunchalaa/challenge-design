@@ -22,15 +22,12 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     letter-spacing: -0.02em;
 }
 
-/* Scroll Reveal Animation */
+/* Scroll Reveal Animation (no-op: sections always visible) */
 .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.55s ease, transform 0.55s ease;
+    /* intentionally empty - sections visible by default */
 }
 .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+    /* intentionally empty */
 }
 
 /* Custom Scrollbar */
