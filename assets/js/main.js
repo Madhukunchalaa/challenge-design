@@ -462,6 +462,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 telemetryTemp.className = "text-emerald-400 font-bold";
             }
         }, 3000);
+    }
     const heroCfgOrderBtn = document.getElementById("hero-cfg-order");
     if (heroCfgOrderBtn) {
         heroCfgOrderBtn.addEventListener("click", () => {
