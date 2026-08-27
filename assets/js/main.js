@@ -337,6 +337,153 @@ document.addEventListener("DOMContentLoaded", () => {
     updateHeaderBadges();
     init3DTilt();
 
+    // -------------------------------------------------------------
+    // Hero Interactive Configurator Console
+    // -------------------------------------------------------------
+    const heroCfgBtns = document.querySelectorAll(".hero-cfg-btn");
+    const heroPriceDisplay = document.getElementById("hero-price-display");
+    const heroPerfPct = document.getElementById("hero-perf-pct");
+    const heroPerfBar = document.getElementById("hero-perf-bar");
+    
+    const hudCpuVal = document.getElementById("hud-cpu-val");
+    const hudGpuVal = document.getElementById("hud-gpu-val");
+    const hudCoolVal = document.getElementById("hud-cool-val");
+    
+    const hudCpuCallout = document.getElementById("hud-cpu-callout");
+    const hudGpuCallout = document.getElementById("hud-gpu-callout");
+    const hudCoolCallout = document.getElementById("hud-cool-callout");
+
+    function updateHeroConfigurator() {
+        let basePrice = 54999;
+        let basePerf = 60;
+        
+        let activeCpuPrice = 0;
+        let activeCpuPerf = 0;
+        let activeCpuVal = "Ryzen 5";
+
+        let activeGpuPrice = 0;
+        let activeGpuPerf = 0;
+        let activeGpuVal = "RTX 4060";
+
+        let activeCoolPrice = 0;
+        let activeCoolPerf = 0;
+        let activeCoolVal = "Air Cooled";
+
+        heroCfgBtns.forEach(btn => {
+            if (btn.classList.contains("active")) {
+                const cat = btn.dataset.cat;
+                const addVal = parseInt(btn.dataset.add) || 0;
+                const perfVal = parseInt(btn.dataset.perf) || 0;
+                const displayVal = btn.dataset.val;
+
+                if (cat === "cpu") {
+                    activeCpuPrice = addVal;
+                    activeCpuPerf = perfVal;
+                    activeCpuVal = displayVal;
+                } else if (cat === "gpu") {
+                    activeGpuPrice = addVal;
+                    activeGpuPerf = perfVal;
+                    activeGpuVal = displayVal;
+                } else if (cat === "cool") {
+                    activeCoolPrice = addVal;
+                    activeCoolPerf = perfVal;
+                    activeCoolVal = displayVal;
+                }
+            }
+        });
+
+        const totalPrice = basePrice + activeCpuPrice + activeGpuPrice + activeCoolPrice;
+        const totalPerf = basePerf + activeCpuPerf + activeGpuPerf + activeCoolPerf;
+
+        if (heroPriceDisplay) {
+            heroPriceDisplay.textContent = "₹" + totalPrice.toLocaleString("en-IN");
+        }
+
+        if (heroPerfPct) {
+            heroPerfPct.textContent = totalPerf + "%";
+        }
+        if (heroPerfBar) {
+            heroPerfBar.style.width = totalPerf + "%";
+        }
+
+        if (hudCpuVal) hudCpuVal.textContent = activeCpuVal;
+        if (hudGpuVal) hudGpuVal.textContent = activeGpuVal;
+        if (hudCoolVal) hudCoolVal.textContent = activeCoolVal;
+    }
+
+    if (heroCfgBtns) {
+        heroCfgBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const cat = btn.dataset.cat;
+                
+                heroCfgBtns.forEach(b => {
+                    if (b.dataset.cat === cat) {
+                        b.classList.remove("active", "border-rose-500", "bg-rose-50/20", "dark:bg-rose-950/20", "text-rose-600", "dark:text-rose-455");
+                        b.classList.add("border-slate-200", "dark:border-slate-800", "text-slate-655", "dark:text-slate-400", "hover:border-slate-350");
+                    }
+                });
+
+                btn.classList.remove("border-slate-200", "dark:border-slate-800", "text-slate-655", "dark:text-slate-400", "hover:border-slate-350");
+                btn.classList.add("active", "border-rose-500", "bg-rose-50/20", "dark:bg-rose-950/20", "text-rose-600", "dark:text-rose-455");
+
+                let targetCallout = null;
+                if (cat === "cpu") targetCallout = hudCpuCallout;
+                if (cat === "gpu") targetCallout = hudGpuCallout;
+                if (cat === "cool") targetCallout = hudCoolCallout;
+
+                if (targetCallout) {
+                    targetCallout.classList.add("scale-105", "shadow-rose-600/30");
+                    setTimeout(() => {
+                        targetCallout.classList.remove("scale-105", "shadow-rose-600/30");
+                    }, 300);
+                }
+
+                updateHeroConfigurator();
+            });
+        });
+    }
+
+    const telemetryTemp = document.getElementById("telemetry-temp");
+    const telemetryFans = document.getElementById("telemetry-fans");
+
+    if (telemetryTemp && telemetryFans) {
+        setInterval(() => {
+            const randomTemp = Math.floor(Math.random() * (42 - 34 + 1)) + 34;
+            const randomFans = Math.floor(Math.random() * (1620 - 1380 + 1)) + 1380;
+            
+            telemetryTemp.textContent = randomTemp + "°C";
+            telemetryFans.textContent = randomFans + " RPM";
+
+            if (randomTemp > 39) {
+                telemetryTemp.className = "text-rose-500 font-bold";
+            } else if (randomTemp > 37) {
+                telemetryTemp.className = "text-amber-400 font-bold";
+            } else {
+                telemetryTemp.className = "text-emerald-400 font-bold";
+            }
+        }, 3000);
+    const heroCfgOrderBtn = document.getElementById("hero-cfg-order");
+    if (heroCfgOrderBtn) {
+        heroCfgOrderBtn.addEventListener("click", () => {
+            let activeCpu = "Ryzen 5";
+            let activeGpu = "RTX 4060";
+            let activeCool = "Air Cooled";
+
+            heroCfgBtns.forEach(btn => {
+                if (btn.classList.contains("active")) {
+                    const cat = btn.dataset.cat;
+                    const val = btn.dataset.val;
+                    if (cat === "cpu") activeCpu = val;
+                    else if (cat === "gpu") activeGpu = val;
+                    else if (cat === "cool") activeCool = val;
+                }
+            });
+
+            const price = heroPriceDisplay ? heroPriceDisplay.textContent : "₹54,999";
+            addToCart(`Custom PC (${activeCpu} / ${activeGpu} / ${activeCool})`, price, "assets/images/hero_pc_new.jpg");
+        });
+    }
+
     // Sticky Navigation
     const header = document.querySelector("header");
     window.addEventListener("scroll", () => {
@@ -507,7 +654,10 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     window.addEventListener("scroll", onScrollHandlers);
-    onScrollHandlers(); // Trigger once initially
+    // Use requestAnimationFrame to ensure layout is complete before triggering reveals
+    requestAnimationFrame(() => {
+        requestAnimationFrame(onScrollHandlers);
+    });
 });
 
 // Switch active PC image layers based on current active section stage
