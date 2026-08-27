@@ -4,16 +4,16 @@
 const pcData = {
     gaming: [
         {
-            name: "Entry Gaming Rig",
+            name: "ENTRY GAMING",
             labelColor: "text-emerald-600 dark:text-emerald-400",
             borderColor: "hover:border-emerald-500",
             fpsBadge: "60+ FPS | 1080P",
             fpsColor: "text-emerald-600 bg-emerald-50 border-emerald-100 dark:bg-emerald-950/20 dark:border-emerald-900/30",
             specs: {
-                cpu: "Ryzen 5 5500",
+                cpu: "Ryzen 5 5600",
                 gpu: "RTX 3060 8GB",
                 ram: "16GB DDR4",
-                ssd: "512GB NVMe"
+                ssd: "512GB NVMe SSD"
             },
             benchmarks: [
                 { game: "Valorant (1080p High)", fps: "240 FPS", pct: "80%" },
@@ -25,16 +25,16 @@ const pcData = {
             image: "assets/images/pc_entry.jpg"
         },
         {
-            name: "Mid Gaming Rig",
+            name: "MID-GAMING",
             labelColor: "text-blue-600 dark:text-blue-400",
             borderColor: "hover:border-blue-500",
             fpsBadge: "100+ FPS | 1080P",
             fpsColor: "text-blue-600 bg-blue-50 border-blue-100 dark:bg-blue-950/20 dark:border-blue-900/30",
             specs: {
-                cpu: "i5 12400F",
+                cpu: "Intel i5 13400F",
                 gpu: "RTX 4060 8GB",
                 ram: "16GB DDR5",
-                ssd: "1TB Gen4"
+                ssd: "1TB NVMe SSD"
             },
             benchmarks: [
                 { game: "Cyberpunk (DLSS ON)", fps: "75 FPS", pct: "58%" },
@@ -46,16 +46,16 @@ const pcData = {
             image: "assets/images/pc_mid.jpg"
         },
         {
-            name: "High Gaming Rig",
+            name: "HIGH GAMING",
             labelColor: "text-orange-600 dark:text-orange-400",
             borderColor: "hover:border-orange-500",
             fpsBadge: "144+ FPS | 1440P",
             fpsColor: "text-orange-600 bg-orange-50 border-orange-100 dark:bg-orange-950/20 dark:border-orange-900/30",
             specs: {
                 cpu: "Ryzen 7 7700X",
-                gpu: "RTX 4070 Super",
+                gpu: "RTX 4070 Super 12GB",
                 ram: "32GB DDR5",
-                ssd: "1TB Gen4"
+                ssd: "1TB Gen4 SSD"
             },
             benchmarks: [
                 { game: "Forza Horizon 5 (1440p)", fps: "140 FPS", pct: "85%" },
@@ -67,16 +67,16 @@ const pcData = {
             image: "assets/images/pc_high.jpg"
         },
         {
-            name: "Extreme Gaming Rig",
+            name: "EXTREME GAMING",
             labelColor: "text-purple-600 dark:text-purple-400",
             borderColor: "hover:border-purple-500",
             fpsBadge: "200+ FPS | 4K",
             fpsColor: "text-purple-600 bg-purple-50 border-purple-100 dark:bg-purple-950/20 dark:border-purple-900/30",
             specs: {
-                cpu: "i9 14900K",
-                gpu: "RTX 4080 Super",
+                cpu: "Intel i9 14900K",
+                gpu: "RTX 4080 Super 16GB",
                 ram: "32GB DDR5",
-                ssd: "2TB Gen4"
+                ssd: "2TB Gen4 SSD"
             },
             benchmarks: [
                 { game: "Alan Wake 2 (4K DLSS)", fps: "80 FPS", pct: "82%" },
@@ -88,7 +88,7 @@ const pcData = {
             image: "assets/images/pc_extreme.jpg"
         },
         {
-            name: "Ultimate Gaming Rig",
+            name: "ULTIMATE GAMING",
             labelColor: "text-amber-600 dark:text-amber-400",
             borderColor: "hover:border-amber-500",
             fpsBadge: "MAX FPS | 4K+",
@@ -97,7 +97,7 @@ const pcData = {
                 cpu: "Ryzen 9 7950X3D",
                 gpu: "RTX 4090 24GB",
                 ram: "64GB DDR5",
-                ssd: "2TB Gen5"
+                ssd: "2TB Gen4 SSD"
             },
             benchmarks: [
                 { game: "Cyberpunk 4K Max", fps: "145 FPS", pct: "98%" },
@@ -111,152 +111,215 @@ const pcData = {
     ],
     editing: [
         {
-            name: "Creator Starter Rig",
+            name: "ENTRY EDITING",
             labelColor: "text-emerald-600 dark:text-emerald-400",
             borderColor: "hover:border-emerald-500",
-            fpsBadge: "4K Timeline",
+            fpsBadge: "FHD | TIMELINE",
             fpsColor: "text-emerald-600 bg-emerald-50 border-emerald-100 dark:bg-emerald-950/20 dark:border-emerald-900/30",
             specs: {
-                cpu: "i5 13400",
-                gpu: "RTX 3060 12GB",
-                ram: "32GB DDR5",
-                ssd: "1TB Gen4"
+                cpu: "Intel i5 13400",
+                gpu: "RTX 3050 6GB",
+                ram: "16GB DDR4",
+                ssd: "512GB NVMe SSD"
             },
             benchmarks: [
-                { game: "Premiere 4K Playback", fps: "Smooth", pct: "65%" },
-                { game: "Resolve Color Grade", fps: "Render Ok", pct: "70%" },
-                { game: "Blender Cycles Render", fps: "Medium", pct: "50%" }
+                { game: "Premiere 1080p Playback", fps: "Fluid", pct: "75%" },
+                { game: "Resolve Grade HD", fps: "Realtime", pct: "70%" },
+                { game: "Photoshop Smart Filters", fps: "Instant", pct: "80%" }
+            ],
+            price: "₹64,999",
+            rawPrice: 64999,
+            image: "assets/images/pc_entry.jpg"
+        },
+        {
+            name: "MID-EDITING",
+            labelColor: "text-blue-600 dark:text-blue-400",
+            borderColor: "hover:border-blue-500",
+            fpsBadge: "4K | TIMELINE",
+            fpsColor: "text-blue-600 bg-blue-50 border-blue-100 dark:bg-blue-950/20 dark:border-blue-900/30",
+            specs: {
+                cpu: "Intel i5 14500",
+                gpu: "RTX 4060 8GB",
+                ram: "32GB DDR5",
+                ssd: "1TB NVMe SSD"
+            },
+            benchmarks: [
+                { game: "Premiere 4K Playback", fps: "Smooth", pct: "80%" },
+                { game: "Resolve Color Grade", fps: "Fast", pct: "75%" },
+                { game: "Blender Cycles Render", fps: "Medium", pct: "60%" }
+            ],
+            price: "₹89,999",
+            rawPrice: 89999,
+            image: "assets/images/pc_mid.jpg"
+        },
+        {
+            name: "PRO EDITING",
+            labelColor: "text-orange-600 dark:text-orange-400",
+            borderColor: "hover:border-orange-500",
+            fpsBadge: "6K | TIMELINE",
+            fpsColor: "text-orange-600 bg-orange-50 border-orange-100 dark:bg-orange-950/20 dark:border-orange-900/30",
+            specs: {
+                cpu: "Intel i7 14700K",
+                gpu: "RTX 4070 12GB",
+                ram: "32GB DDR5",
+                ssd: "1TB Gen4 SSD"
+            },
+            benchmarks: [
+                { game: "6K ProRES Encoding", fps: "Fast", pct: "85%" },
+                { game: "After Effects Cache", fps: "Fast", pct: "85%" },
+                { game: "Cinema 4D Viewport", fps: "Fluid", pct: "80%" }
+            ],
+            price: "₹1,49,999",
+            rawPrice: 149999,
+            image: "assets/images/pc_high.jpg"
+        },
+        {
+            name: "EXTREME EDITING",
+            labelColor: "text-purple-600 dark:text-purple-400",
+            borderColor: "hover:border-purple-500",
+            fpsBadge: "8K | TIMELINE",
+            fpsColor: "text-purple-600 bg-purple-50 border-purple-100 dark:bg-purple-950/20 dark:border-purple-900/30",
+            specs: {
+                cpu: "Intel i9 14900K",
+                gpu: "RTX 4070 Ti Super 16GB",
+                ram: "64GB DDR5",
+                ssd: "2TB Gen4 SSD"
+            },
+            benchmarks: [
+                { game: "8K Grade Playback", fps: "Realtime", pct: "90%" },
+                { game: "Blender Render Time", fps: "Fast", pct: "88%" },
+                { game: "Unreal Engine 5.4 Cook", fps: "Fast", pct: "85%" }
+            ],
+            price: "₹2,19,999",
+            rawPrice: 219999,
+            image: "assets/images/pc_extreme.jpg"
+        },
+        {
+            name: "ULTIMATE EDITING",
+            labelColor: "text-amber-600 dark:text-amber-400",
+            borderColor: "hover:border-amber-500",
+            fpsBadge: "MAX | PRODUCTION",
+            fpsColor: "text-amber-600 bg-amber-50 border-amber-100 dark:bg-amber-950/20 dark:border-amber-900/30",
+            specs: {
+                cpu: "AMD Ryzen 9 7950X",
+                gpu: "RTX 4090 24GB",
+                ram: "64GB DDR5",
+                ssd: "2TB Gen4 SSD"
+            },
+            benchmarks: [
+                { game: "8K Multicam Render", fps: "Instant", pct: "98%" },
+                { game: "Octane Render Bench", fps: "Max Score", pct: "99%" },
+                { game: "V-Ray GPU Speed", fps: "Ultimate", pct: "97%" }
+            ],
+            price: "₹3,59,999",
+            rawPrice: 359999,
+            image: "assets/images/pc_ultimate.jpg"
+        }
+    ],
+    workstation: [
+        {
+            name: "ENTRY WORKSTATION",
+            labelColor: "text-emerald-600 dark:text-emerald-400",
+            borderColor: "hover:border-emerald-500",
+            fpsBadge: "OFFICE | WORK",
+            fpsColor: "text-emerald-600 bg-emerald-50 border-emerald-100 dark:bg-emerald-950/20 dark:border-emerald-900/30",
+            specs: {
+                cpu: "Intel i5 13400",
+                gpu: "Intel UHD Graphics",
+                ram: "16GB DDR4",
+                ssd: "512GB NVMe SSD"
+            },
+            benchmarks: [
+                { game: "Excel Heavy Macro", fps: "Fast", pct: "75%" },
+                { game: "Chrome 30+ Tabs", fps: "Smooth", pct: "80%" },
+                { game: "VS Code Loading", fps: "Instant", pct: "85%" }
+            ],
+            price: "₹49,999",
+            rawPrice: 49999,
+            image: "assets/images/pc_entry.jpg"
+        },
+        {
+            name: "MID-WORKSTATION",
+            labelColor: "text-blue-600 dark:text-blue-400",
+            borderColor: "hover:border-blue-500",
+            fpsBadge: "PRO | WORK",
+            fpsColor: "text-blue-600 bg-blue-50 border-blue-100 dark:bg-blue-950/20 dark:border-blue-900/30",
+            specs: {
+                cpu: "Intel i7 13700",
+                gpu: "Intel UHD Graphics",
+                ram: "32GB DDR5",
+                ssd: "1TB NVMe SSD"
+            },
+            benchmarks: [
+                { game: "Database Query Load", fps: "Very Fast", pct: "85%" },
+                { game: "CAD Viewport Render", fps: "Fluid", pct: "75%" },
+                { game: "Docker Container spin", fps: "4.5 sec", pct: "80%" }
             ],
             price: "₹79,999",
             rawPrice: 79999,
             image: "assets/images/pc_mid.jpg"
         },
         {
-            name: "Premiere Pro Spec",
+            name: "HIGH WORKSTATION",
             labelColor: "text-orange-600 dark:text-orange-400",
             borderColor: "hover:border-orange-500",
-            fpsBadge: "6K ProRES Smooth",
+            fpsBadge: "AI | CODING",
             fpsColor: "text-orange-600 bg-orange-50 border-orange-100 dark:bg-orange-950/20 dark:border-orange-900/30",
             specs: {
-                cpu: "i7 14700K",
-                gpu: "RTX 4070 12GB",
+                cpu: "Intel i7 14700K",
+                gpu: "RTX 4070 Ti Super 16GB",
                 ram: "64GB DDR5",
-                ssd: "2TB Gen4"
+                ssd: "2TB Gen4 SSD"
             },
             benchmarks: [
-                { game: "6K Red Raw Encoding", fps: "Fast", pct: "80%" },
-                { game: "After Effects RAM Cache", fps: "Fast", pct: "85%" },
-                { game: "Cinema 4D Viewport", fps: "Fluid", pct: "75%" }
+                { game: "SDXL Image Gen (1024)", fps: "1.2s / Img", pct: "85%" },
+                { game: "LLaMA 3-8B Inference", fps: "45 Tok/s", pct: "80%" },
+                { game: "TensorFlow training", fps: "Fast", pct: "82%" }
             ],
-            price: "₹1,54,999",
-            rawPrice: 154999,
+            price: "₹1,79,999",
+            rawPrice: 179999,
             image: "assets/images/pc_high.jpg"
         },
         {
-            name: "DaVinci Studio Build",
+            name: "EXTREME WORKSTATION",
             labelColor: "text-purple-600 dark:text-purple-400",
             borderColor: "hover:border-purple-500",
-            fpsBadge: "8K Grading Ready",
+            fpsBadge: "DEEP | LEARNING",
             fpsColor: "text-purple-600 bg-purple-50 border-purple-100 dark:bg-purple-950/20 dark:border-purple-900/30",
             specs: {
-                cpu: "i9 14900K",
-                gpu: "RTX 4080 Super",
-                ram: "64GB DDR5",
-                ssd: "2TB Gen4"
+                cpu: "Intel i9 14900K",
+                gpu: "Dual RTX 4070Ti Super 16B",
+                ram: "128GB DDR5",
+                ssd: "2TB Gen4 SSD"
             },
             benchmarks: [
-                { game: "8K Grade playback", fps: "Realtime", pct: "90%" },
-                { game: "Blender Render Time", fps: "90s / F", pct: "88%" },
-                { game: "Unreal Engine 5.4 Cook", fps: "Fast", pct: "85%" }
+                { game: "PyTorch CNN Epoch", fps: "Max Speed", pct: "92%" },
+                { game: "LLaMA 3-70B (Q4)", fps: "25 Tok/s", pct: "88%" },
+                { game: "Dataset Load (10GB)", fps: "Instant", pct: "94%" }
             ],
-            price: "₹2,24,999",
-            rawPrice: 224999,
+            price: "₹3,19,999",
+            rawPrice: 319999,
             image: "assets/images/pc_extreme.jpg"
         },
         {
-            name: "Production Master Pro",
+            name: "ULTIMATE WORKSTATION",
             labelColor: "text-amber-600 dark:text-amber-400",
             borderColor: "hover:border-amber-500",
-            fpsBadge: "Dual GPU / Red Raw",
-            fpsColor: "text-amber-600 bg-amber-50 border-amber-100 dark:bg-amber-950/20 dark:border-amber-900/30",
+            fpsBadge: "ENTERPRISE | AI",
+            fpsColor: "text-amber-650 bg-amber-50 border-amber-100 dark:bg-amber-950/20 dark:border-amber-900/30",
             specs: {
                 cpu: "Threadripper 7960X",
-                gpu: "RTX 4090 24GB",
-                ram: "128GB ECC",
-                ssd: "4TB Array"
-            },
-            benchmarks: [
-                { game: "8K Multicam Render", fps: "Instant", pct: "98%" },
-                { game: "Octane Render Bench", fps: "Score Max", pct: "99%" },
-                { game: "V-Ray GPU Speed", fps: "Ultimate", pct: "97%" }
-            ],
-            price: "₹4,89,999",
-            rawPrice: 489999,
-            image: "assets/images/pc_ultimate.jpg"
-        }
-    ],
-    workstation: [
-        {
-            name: "AI Starter Rig",
-            labelColor: "text-orange-600 dark:text-orange-400",
-            borderColor: "hover:border-orange-500",
-            fpsBadge: "16GB VRAM AI Model",
-            fpsColor: "text-orange-600 bg-orange-50 border-orange-100 dark:bg-orange-950/20 dark:border-orange-900/30",
-            specs: {
-                cpu: "i7 14700K",
-                gpu: "RTX 4070Ti Super",
-                ram: "64GB DDR5",
-                ssd: "2TB Gen4"
-            },
-            benchmarks: [
-                { game: "SDXL Image Gen (1024)", fps: "1.2s / Img", pct: "75%" },
-                { game: "LLaMA 3-8B Inference", fps: "45 Tok/s", pct: "70%" },
-                { game: "TensorFlow Epoch", fps: "Fast", pct: "65%" }
-            ],
-            price: "₹1,89,999",
-            rawPrice: 189999,
-            image: "assets/images/pc_high.jpg"
-        },
-        {
-            name: "Deep Learning Box",
-            labelColor: "text-purple-600 dark:text-purple-400",
-            borderColor: "hover:border-purple-500",
-            fpsBadge: "32GB Combined VRAM",
-            fpsColor: "text-purple-600 bg-purple-50 border-purple-100 dark:bg-purple-950/20 dark:border-purple-900/30",
-            specs: {
-                cpu: "i9 14900K",
-                gpu: "Dual RTX 4070Ti",
-                ram: "128GB DDR5",
-                ssd: "2TB Array"
-            },
-            benchmarks: [
-                { game: "PyTorch CNN Epoch", fps: "Very Fast", pct: "88%" },
-                { game: "LLaMA 3-70B (Q4)", fps: "25 Tok/s", pct: "85%" },
-                { game: "Stable Diffusion batch", fps: "15 Img / m", pct: "80%" }
-            ],
-            price: "₹3,69,999",
-            rawPrice: 369999,
-            image: "assets/images/pc_extreme.jpg"
-        },
-        {
-            name: "ML Enterprise Server",
-            labelColor: "text-amber-600 dark:text-amber-400",
-            borderColor: "hover:border-amber-500",
-            fpsBadge: "48GB VRAM Dual 4090",
-            fpsColor: "text-amber-600 bg-amber-50 border-amber-100 dark:bg-amber-950/20 dark:border-amber-900/30",
-            specs: {
-                cpu: "Threadripper 7970X",
-                gpu: "Dual RTX 4090",
-                ram: "256GB ECC",
-                ssd: "8TB Array"
+                gpu: "Dual RTX 4090 24GB",
+                ram: "256GB DDR5",
+                ssd: "4TB Gen4 SSD"
             },
             benchmarks: [
                 { game: "LLaMA 3-70B Full FP16", fps: "60 Tok/s", pct: "98%" },
                 { game: "CNN Dataset Training", fps: "Max Accel", pct: "99%" },
                 { game: "NeRF Reconstruction", fps: "Instant", pct: "96%" }
             ],
-            price: "₹8,49,999",
-            rawPrice: 849999,
+            price: "₹7,49,999",
+            rawPrice: 749999,
             image: "assets/images/pc_ultimate.jpg"
         }
     ]
@@ -330,6 +393,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Render PC Cards initially
     renderPCList();
+
+    // Carousel Arrows Scroll handlers
+    const pcCarousel = document.getElementById("pc-cards-carousel");
+    const pcPrevBtn = document.getElementById("pc-carousel-prev");
+    const pcNextBtn = document.getElementById("pc-carousel-next");
+    if (pcCarousel && pcPrevBtn && pcNextBtn) {
+        pcPrevBtn.addEventListener("click", () => {
+            pcCarousel.scrollBy({ left: -340, behavior: 'smooth' });
+        });
+        pcNextBtn.addEventListener("click", () => {
+            pcCarousel.scrollBy({ left: 340, behavior: 'smooth' });
+        });
+    }
+
+    // Budget bar scroll handler
+    const budgetCarousel = document.getElementById("budget-carousel-container");
+    const budgetNextBtn = document.getElementById("budget-carousel-next");
+    if (budgetCarousel && budgetNextBtn) {
+        budgetNextBtn.addEventListener("click", () => {
+            if (budgetCarousel.scrollLeft + budgetCarousel.clientWidth >= budgetCarousel.scrollWidth - 10) {
+                budgetCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                budgetCarousel.scrollBy({ left: 200, behavior: 'smooth' });
+            }
+        });
+    }
 
     // Section 3 Tabs Switcher
     const tabs = document.querySelectorAll(".tab-btn");
@@ -521,7 +610,7 @@ function init3DTilt() {
 
 // Render the PCs inside the high-impact card grid
 function renderPCList() {
-    const grid = document.getElementById("pc-cards-grid");
+    const grid = document.getElementById("pc-cards-carousel");
     if (!grid) return;
 
     const data = pcData[currentTab];
@@ -540,24 +629,31 @@ function renderPCList() {
             </div>
         `).join('');
 
+        const fpsParts = pc.fpsBadge.split('|').map(s => s.trim());
+        const fpsTitle = fpsParts[0] || '';
+        const fpsResolution = fpsParts[1] || '';
+
         const card = document.createElement("div");
-        card.className = "pc-grid-card-wrapper";
+        card.className = "w-[280px] sm:w-[320px] shrink-0 snap-start pc-grid-card-wrapper pb-2";
         card.innerHTML = `
-            <div class="pc-grid-card bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-3xl p-5 hover:border-rose-500 dark:hover:border-rose-500/50 hover:shadow-2xl dark:hover:shadow-rose-950/20 transition-all duration-300 tilt-3d flex flex-col justify-between h-full relative group">
+            <div class="pc-grid-card bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 rounded-2xl p-4 sm:p-5 hover:border-rose-500 dark:hover:border-rose-500/50 hover:shadow-xl dark:hover:shadow-rose-950/20 transition-all duration-300 tilt-3d flex flex-col justify-between h-full relative group">
                 
                 <div class="tilt-child-3d">
                     <!-- Top Category & FPS Badge -->
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs font-black uppercase tracking-wider ${pc.labelColor}">${pc.name}</span>
-                        <span class="text-[9px] font-black px-2 py-0.5 rounded-full border ${pc.fpsColor}">${pc.fpsBadge}</span>
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-[11px] font-black uppercase tracking-wider text-slate-900 dark:text-white">${pc.name}</span>
+                        <div class="text-right">
+                            <span class="block text-[11px] font-black tracking-wide leading-none ${pc.labelColor}">${fpsTitle}</span>
+                            <span class="block text-[9px] text-slate-400 dark:text-slate-500 font-semibold mt-0.5 leading-none">${fpsResolution}</span>
+                        </div>
                     </div>
 
                     <!-- Visual PC Case Cover -->
-                    <div class="h-48 w-full relative mb-4 flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800/60 shadow-inner">
-                        <img src="${pc.image}" alt="${pc.name}" class="object-contain h-40 w-auto transition-transform duration-700 group-hover:scale-105">
+                    <div class="h-44 w-full relative mb-4 flex items-center justify-center overflow-hidden bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-100 dark:border-slate-800/60 shadow-inner">
+                        <img src="${pc.image}" alt="${pc.name}" class="object-contain h-36 w-auto transition-transform duration-700 group-hover:scale-105">
                         
                         <!-- Slide-up hover benchmarks projection -->
-                        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-sm p-4 flex flex-col justify-between translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10 rounded-2xl text-left border border-slate-800">
+                        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-sm p-4 flex flex-col justify-between translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10 rounded-xl text-left border border-slate-800">
                             <div>
                                 <p class="text-[10px] font-black uppercase text-rose-500 tracking-widest mb-2 border-b border-slate-800 pb-1 flex items-center">
                                     <i class="fa-solid fa-gamepad mr-1.5 text-xs text-amber-500"></i> LIVE BENCHMARKS
@@ -566,39 +662,29 @@ function renderPCList() {
                                     ${benchHtml}
                                 </div>
                             </div>
-                            <p class="text-[8px] text-slate-500 font-semibold">* Estimated performance stats at default settings</p>
+                            <p class="text-[8px] text-slate-505 font-semibold">* Estimated performance stats</p>
                         </div>
                     </div>
 
-                    <!-- Compact 2x2 Specs Dashboard -->
-                    <div class="grid grid-cols-2 gap-2 text-[10px] text-slate-650 dark:text-slate-400 mb-4 border-b border-slate-100 dark:border-slate-800 pb-3 text-left">
-                        <div class="flex items-center space-x-2">
-                            <i class="fa-solid fa-microchip text-rose-600 dark:text-rose-500 text-xs w-4 flex-shrink-0"></i>
-                            <span class="truncate font-medium">${pc.specs.cpu}</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fa-solid fa-bolt-lightning text-rose-600 dark:text-rose-500 text-xs w-4 flex-shrink-0"></i>
-                            <span class="truncate font-medium">${pc.specs.gpu}</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fa-solid fa-memory text-rose-600 dark:text-rose-500 text-xs w-4 flex-shrink-0"></i>
-                            <span class="truncate font-medium">${pc.specs.ram}</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fa-solid fa-database text-rose-600 dark:text-rose-500 text-xs w-4 flex-shrink-0"></i>
-                            <span class="truncate font-medium">${pc.specs.ssd}</span>
-                        </div>
+                    <!-- Specs List (Centered Multi-line) -->
+                    <div class="text-center space-y-1 text-xs text-slate-500 dark:text-slate-455 py-3 border-t border-slate-100 dark:border-slate-800/50 mb-3">
+                        <div class="font-semibold text-slate-800 dark:text-slate-200">${pc.specs.cpu}</div>
+                        <div>${pc.specs.gpu}</div>
+                        <div>${pc.specs.ram}</div>
+                        <div>${pc.specs.ssd}</div>
                     </div>
                 </div>
 
-                <!-- Price Tags and Action Buttons -->
+                <!-- Price and Action Buttons -->
                 <div class="tilt-child-3d mt-auto">
-                    <span class="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest leading-none block text-left">Starting from</span>
-                    <div class="flex justify-between items-center mt-2">
-                        <span class="text-xl font-black text-slate-900 dark:text-white leading-none">${pc.price}</span>
+                    <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800/50 pt-4 mt-auto">
+                        <div class="flex flex-col text-left">
+                            <span class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white leading-none">${pc.price}</span>
+                            <span class="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest leading-none mt-1">Starting from</span>
+                        </div>
                         <div class="flex space-x-1.5">
-                            <button class="border border-rose-600 text-rose-600 dark:text-rose-455 font-bold px-3 py-1.5 rounded-xl text-[9px] hover:bg-rose-50 dark:hover:bg-slate-900 transition-colors uppercase tracking-wider customize-pc-btn" data-pc-name="${pc.name}">Customize</button>
-                            <button class="bg-rose-600 hover:bg-rose-700 text-white font-bold px-3.5 py-1.5 rounded-xl text-[9px] transition-colors uppercase tracking-wider add-to-cart-btn-pc" data-pc-name="${pc.name}" data-pc-price="${pc.price}" data-pc-image="${pc.image}">Buy Now</button>
+                            <button class="px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[10px] font-bold uppercase tracking-wider hover:border-rose-500 hover:text-rose-500 transition-all customize-pc-btn" data-pc-name="${pc.name}">Customize</button>
+                            <button class="px-3.5 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white text-[10px] font-bold uppercase tracking-wider transition-all add-to-cart-btn-pc" data-pc-name="${pc.name}" data-pc-price="${pc.price}" data-pc-image="${pc.image}">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -632,16 +718,19 @@ function findAndScrollToPC(budgetAmount) {
         }
     }
 
-    // Scroll correct card in grid into view
-    const cards = document.querySelectorAll("#pc-cards-grid > .pc-grid-card-wrapper");
-    if (cards && cards[closestIndex]) {
-        cards[closestIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // Scroll correct card inside horizontal carousel into view
+    const carousel = document.getElementById("pc-cards-carousel");
+    const cards = document.querySelectorAll("#pc-cards-carousel > .pc-grid-card-wrapper");
+    if (carousel && cards && cards[closestIndex]) {
+        const card = cards[closestIndex];
+        const scrollLeft = card.offsetLeft - carousel.offsetLeft - (carousel.clientWidth - card.clientWidth) / 2;
+        carousel.scrollTo({ left: scrollLeft, behavior: 'smooth' });
         
-        const cardInner = cards[closestIndex].querySelector(".pc-grid-card");
+        const cardInner = card.querySelector(".pc-grid-card");
         if (cardInner) {
-            cardInner.classList.add("ring-4", "ring-rose-500", "scale-105");
+            cardInner.classList.add("ring-4", "ring-rose-500", "scale-[1.02]");
             setTimeout(() => {
-                cardInner.classList.remove("ring-4", "ring-rose-500", "scale-105");
+                cardInner.classList.remove("ring-4", "ring-rose-500", "scale-[1.02]");
             }, 1500);
         }
     }
