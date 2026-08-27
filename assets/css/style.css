@@ -22,6 +22,17 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     letter-spacing: -0.02em;
 }
 
+/* Scroll Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
